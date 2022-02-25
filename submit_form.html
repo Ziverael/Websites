@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <ul>
+                <li><a href="#"><img src="logo" alt="logo"></a></li>
+                <li><a href="#">Produkty</a></li>
+                <li><a href="#">Strefa klienta</a></li>
+                <li><a href="#">Promocje</a></li>
+            </ul>
+        </header>
+        <main>
+            <h1>Formularz wysyłkowy</h1>
+            <p>Dziękujemy za zaufanie naszej sieci sklepów, która od kilku lat przoduje wśród ocen innych klientów, przez co wierzymy, że także <span>Ty</span> nie będziesz zawiedziony. Poniższy formularz pozwoli nam dokładnie wybrać Twój produkt i dostarczyć już w przeciągu kilka dni do Ciebie &#x0263B;</p>
+            <form action="/form_result/" method="get">
+                <fieldset>
+                    <div>
+                    <legend>Dane produktu</legend>
+                    <label for="type">Typ produktu:</label>
+                    <select name="p_type" id="type">
+                        <option value="">--Wskaż typ--</option>
+                        <option value="T-shirt">T-shirt</option>
+                        <option value="hoody">Bluza z kapturem</option>
+                        <option value="sweatshirt">Koszula na ramiączka</option>
+                        <option value="backpack">Plecak</option>
+                        <option value="wallet">Portfel</option>
+                    </select>
+                    </div>
+                    <div><label for="col">Kolor bazowy:</label><input type="color" name="col" id="col"></div>
+                    <p>Rodzaj wzoru:</p>
+                    <div>
+                    <input type="radio" name="pattern" id="txt">
+                    <label for="txt">Napis</label>
+                    </div>
+                    <div><label for="txt2print"><sup><a href="#info">*</a></sup>Napis na koszulce:</label>
+                        <input type="text" name="txt2print" id="txt2print" disabled>
+                    </div>
+                    <div>
+                        <input type="radio" name="pattern" id="img">
+                        <label for="img">Zdjęcie</label>
+                    </div>
+                    <div><label for="img_src"><sup><a href="#info">*</a></sup>Zdjęcie:</label>
+                        <input type="file" name="img" id="img_src" accept="image/png, image/jpg" disabled></div>
+                </fieldset>
+                <fieldset>
+                    <legend>Dane Odbiorcy:</legend>
+                    <div>
+                        <label for="name">Imię:</label>
+                        <input type="text" name="name" id="name" placeholder="Imię">
+                    </div>
+                    <div><label for="sname">Nazwisko:</label><input type="text" name="sname" id="sname" placeholder="Nazwisko"></div>
+                    <div><label for="mail">Adres e-mail:</label><input type="email"></div>
+                    <div><p style="display:inline;">Płeć:</p><label for="man">&male;</label><input type="radio" id="man" name="sex" value="male"><label for="wman">&female;</label><input type="radio" name="sex" id="wman" value="female"></div>
+                    <div><label for="age">Wiek:</label><input type="number" min="1" value="14"></div>
+                    <div><label for="tel_">Telefon:</label><input type="tel" name="tel" id="tel_"></div>
+                </fieldset>
+                <fieldset>
+                    <legend>Dane wysyłki:</legend>
+                    <div><label for="city"></label>Miejscowość:<input type="text" id="city" name="city" placeholder="Miejscowość"></div>
+                    <div><label for="st"></label>Ulica:<input type="text" id="st" name="street" placeholder="Ulica"></div>
+                    <div><label for="house">Nr domu:</label><input type="number" name="house" id="house" max="1000">/<input type="number" name="number2" id="number2" max="1000"></div>
+                    <div><label for="post">Kod pocztowy:</label><input type="text" placeholder="00-000" maxlength="6"></div>
+                    <div><label for="time">Oczekiwana data odbioru:</label><input type="date"></div>
+                    <div><label for="message">Wiadomość dla kuriera:</label></div><div><textarea name="msg" id="message" cols="50" rows="3" placeholder="Jeśli masz uwagi co do formy wysyłki, zamieść je tutaj..."></textarea></div>
+
+                </fieldset>
+                
+                <div><input type="checkbox" name="agreements" id="agr" required><label for="agr"><sup><a href="#info">**</a></sup>Zapoznałem się z warunkami serwisu oraz wyrażam zgodę na przetwanirzanie moich danych osobowych w celu realizacji mojego zamówienia w zakresie jaki wspomniany jest w <a href="licence.html">warunkach serwisu</a></label></div>
+                <button type="reset">Reset</button>
+                <button>Potwierdź</button>
+            </form>
+            <div id="info">
+                <p><sup>*</sup> Wypełnij tylko, gdy zaznaczysz powyższe pole</p>
+                <p><sup>**</sup> Wymagane</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

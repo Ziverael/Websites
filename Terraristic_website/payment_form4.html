@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+    <h1>Realizacja zamówienia: Opłata zamówienia</h1>
+    <progress min="0" max="4" value="4"></progress>
+    <div id="formCont">
+    <form action="/buy/" method="get">
+        <fieldset>
+            <legend>Dane osobowe</legend>
+            <div>
+                <label for="nm">Imię:</label>
+                <input type="text" id="nm" maxlength="32" value="buff1" disabled required>
+                </div>
+                <div>
+                <label for="snm">Nazwisko:</label><input type="text" id="snm" name="surename" value="Kowalski" disabled required>
+                </div>
+                <div>
+                <label for="bt">Data urodzenia:</label><input type="date" id="bt" name="birthday" disabled>
+                </div>
+                
+        </fieldset>
+        <fieldset>
+            <legend>Punkt dostawy</legend>
+            <div><label for=""></label><input type="text"></div>
+            <div><label for=""></label><input type="text"></div>
+            <div><label for=""></label><input type="text"></div>
+            <div><label for=""></label><input type="text"></div>
+        </fieldset>
+        <fieldset>
+            <legend>Płatność</legend>
+            <div><label for=""></label><input type="text"></div>
+            <div><label for=""></label><input type="text"></div>
+            <div><label for=""></label><input type="text"></div>
+            <div><label for=""></label><input type="text"></div>
+        </fieldset>
+            <button class="nextForm">Zatwierdzam i płacę</button>
+        </form>
+    </div>
+ </main>
+
+</body>
+</html>

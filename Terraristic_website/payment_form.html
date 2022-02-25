@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+    <h1>Realizacja zamówienia: Dane osobowe</h1>
+    <progress min="0" max="4" value="1"></progress>
+    <div id="formCont">
+    <form action="/buy/" method="get">
+            <div>
+            <label for="nm">Imię:</label>
+            <input type="text" id="nm" maxlength="32" placeholder="Wprowadź imię" required>
+            </div>
+            <div>
+            <label for="snm">Nazwisko:</label><input type="text" id="snm" name="surename" placeholder="Wprowadź nazwisko" required>
+            </div>
+            <div>    
+            <label for="cp">Firma:</label><input type="text" id="cp" name="company" maxlength="32" placeholder="Wprowadź nazwę firmy">
+            </div>
+            <button class="nextForm">Dalej</button>
+        </form>
+    </div>
+ </main>
+
+</body>
+</html>

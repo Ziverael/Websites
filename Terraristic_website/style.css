@@ -1,0 +1,117 @@
+html{
+    font-size:20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    background-color: #EAAC8B;
+    color:#355070;
+}
+
+nav li{
+    display: inline;
+    list-style-type: none;
+}
+
+header img{
+    float: left;
+    height:70px;
+    width:auto;
+}
+
+fieldset{
+    font-size: 1.5rem;
+    margin:10px 0 10px 0;
+}
+
+input, select, button{
+    font-size: 1.5rem;
+    width:22rem;
+    background-color: ;
+    color:355070;
+}
+select, button{
+    width:auto;
+}
+
+#prodNav li div{
+    background-color:#E56B6F;
+    height:3rem;
+    font-size:1.2em;
+}
+#prodNav li div:hover{
+    background-color:#e48589;
+
+}
+#prodNav ul{
+    margin:0 0 10px;
+    text-transform: uppercase;
+}
+#prodNav a{
+    text-decoration:none;
+}
+
+}
+a{
+    color:#6D597A;
+}
+
+
+table{
+    /*border-collapse: separate;*/
+    border-spacing:50px;
+}
+
+td{
+    width:530px;
+    height:700px;
+    background-color: #E56B6F;
+    border-radius: 5%;
+}
+td h2{
+    text-align:center;
+    font-weight:700px;
+}
+
+#news{
+    height: 300px;
+    width:700px;
+    border:10px inset  #355070;
+}
+
+#formCont{
+    border:solid 5px #6D597A;
+    padding:2em;
+}
+td img{
+    width: 101%;
+    height: 50%;
+    margin:0 0 10px 0;
+    overflow: hidden;/*That's not solution*/
+}
+td button{
+    display: none;
+
+}
+td ul{
+    list-style-type:square;
+}
+
+td .descr{
+    font-weight: 800;
+}
+
+td p{
+    text-align: justify;
+    padding:30px;
+}
+
+td:hover > button{
+    display:block;
+}
+
+#footNav{
+    background-color: #6D597A;
+}
+progress{
+    width: 1000px;
+}
