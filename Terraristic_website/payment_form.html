@@ -9,7 +9,7 @@
 </head>
 <body>
     <main>
-    <h1>Realizacja zamówienia: Dane osobowe</h1>
+    <h1>Realizacja zamówienia: Dane kontaktowe</h1>
     <progress min="0" max="4" value="1"></progress>
     <div id="formCont">
     <form action="/buy/" method="get">
@@ -23,6 +23,8 @@
             <div>    
             <label for="cp">Firma:</label><input type="text" id="cp" name="company" maxlength="32" placeholder="Wprowadź nazwę firmy">
             </div>
+            <div><label for="ml">Email:</label><input id="ml" name="email" placeholder="nazwa@domena.com" type="email" maxlength="64" required></div>
+            <div><label for="tel">Telefon:</label><input id="tel" name="tel" placeholder="000-000-000" type="tel" maxlength="14"></div>
             <button class="nextForm">Dalej</button>
         </form>
     </div>
