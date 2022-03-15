@@ -1,0 +1,58 @@
+body{
+    margin:0;
+    padding: 10px;
+    background-color: lightgrey;
+}
+#content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+    width:80%;
+    min-height: 100vh;
+
+}
+
+.card{
+    display: flex;
+    position: relative;
+    margin: calc(10% / 6);
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+.card .circ{
+    position: absolute;
+    border-radius: 50%;
+    background-color: blue;
+    width: 350px;
+    height: 350px;
+    transition: all .25s linear ;
+
+}
+.card .circ:hover{
+    border-radius: 20px;
+    width: 800px;
+    background-color: red;
+}
+
+.card  img{
+    position: absolute;
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    border: solid 5px black;
+    transition: all .25s linear;
+    pointer-events: none; /*To don't disturb circ hover*/
+}
+
+.card .circ:hover + img{
+    transform: scale(140%) translate(70%);
+}
+
+.card .content{
+    position: relative;
+    width: 100%;
+    padding: 20px 20px 20px 40px;
+}
+
