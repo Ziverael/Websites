@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form1.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>We are glad you are going to join us!</h1>
+    <div id="content">
+        <h2>Register in few seconds!</h2>
+    <form>
+        <div class="input">
+            <label for="name">Login</label><input type="text" name="login" id="name" placeholder="Login" maxlength="32" required>
+            <div class="tip">Login powinien być dłuższy niż 6 znaków oraz nie zawierać znaków specjalnych i ogonków.</div>
+        </div>
+        <div class="input">
+            <label for="mail">E-mail:</label>
+            <input type="mail" placeholder="E-mail" name="email" id="mail" required></div>
+        <div class="input">
+            <label for="chech">Confinrm e-mail:</label><input type="email" required></div>
+        <div class="input">
+            <span>Sex:</span>
+            <label for="male">&male;</label>
+            <input type="radio" name="sex" id="male" value="male">
+            <label for="female">&female;</label>
+            <input type="radio" name="sex" id="female" value="female">
+        </div>
+        <div class="input">
+            <label for="pwd">Password</label>
+            <input type="password">
+            <div class="tip">Hasło musi zawierać conajmniej 6 znaków, liczbę, dużą literę oraz znak specjalny.</div></div>
+        <div class="input">
+            <label for="check2">Confrim password</label>
+            <input type="password">
+            <div class="tip">Hasło musi zawierać conajmniej 6 znaków, liczbę, dużą literę oraz znak specjalny.</div></div>
+
+        </div>
+    </form>
+</div>
+</body>
+</html>

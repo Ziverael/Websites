@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marathon form</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Marathon candidate form</h1>
+        </header>
+        <main>
+            <form action="/candidates/" method="get">
+                <fieldset>
+                    <legend>Candidate personal data</legend>
+                    <div>
+                    <label for="nm">Name:</label>
+                    <input type="text" name="name" id="nm" pattern="\D*" minlength="2" required>
+                    </div>
+                    <div>
+                    <label for="sm">Surename:</label>
+                    <input type="text" name="surename" id="sm" pattern="\D*" required placeholder="Surename" minlength="2">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <p>Select distance:</p>
+                    <div>
+                    <input type="radio" name="race" id="fr5" value="fr5">
+                    <label for="fr5">Fun Run 5k</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="race" id="hf" value="hf">
+                        <label for="hf">Half Race</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="race" id="fr" value="fr">
+                        <label for="fr">Full Race</label>
+                    </div>
+                    <div>
+                        <label for="mail">Email:</label>
+                        <input type="email" name="mail" id="mail" required>
+                        <label for="pw">Password:</label>
+                        <input type="password" name="nothing4u" id="pw" placeholder="Password" required>
+                    </div>
+                    <div><label for="age">Select age group:</label><select name="group" id="age">
+                        <option value="U40">U40</option>
+                        <option value="U24">U24</option>
+                        <option value="U20">U20</option>
+                        <option value="U16">U16</option>
+                    </select></div>
+                </fieldset>
+                <button>Sent!</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

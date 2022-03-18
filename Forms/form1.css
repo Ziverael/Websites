@@ -1,0 +1,58 @@
+html{
+    font-size: 18px;
+    color: #023047;
+}
+
+body{
+    margin:0;
+    background-color: #219ebc;
+}
+
+#content{
+    margin: 10%;
+    background-color: #8ecae6;
+    width:80%;
+    padding: 30px 20px;
+    border-radius: 100px ;
+    box-shadow: .5em .5em 0 0 #023047;
+}
+
+.input{
+    margin: 80px 20px;
+    font-size: 2rem;
+}
+
+input{
+    box-sizing: border-box;
+    width:38rem;
+    font-size: 2rem ;
+    padding: .5em;
+    border-radius: 10px;
+    border: 2px solid #023047;
+    transition: border .25s, box-shadow .25s;
+}
+
+input:hover{
+    border: 2px solid #fb8500;/*Remove moving: add div related and back to this with color and behind with opacity 0*/
+    box-shadow: 0 0 20px -2px #fb8500;
+}
+
+.tip{
+    display: inline-block;
+    background-color: white;
+    border-radius: 1em;
+    border: 2px solid #fb8500;
+    box-shadow: 0 0 20px -2px #fb8500;
+    width: 12em;
+    padding:20px;
+    font-size: .5em;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+input:hover + .tip{
+    opacity:1;
+}
+input[type="radio"]{
+    width:2em;
+}
