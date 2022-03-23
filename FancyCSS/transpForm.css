@@ -60,6 +60,8 @@ main{
     border-radius: 2em;
     box-shadow: .1em .2em .5em rgba(0,0,0,0.1);
     border: .1em solid rgba(255,255,255, .3); 
+    border-left: .01em solid rgba(255,255,255,.5);
+    border-top: .01em solid rgba(255,255,255,.5);
 }
 
 h1{
@@ -97,7 +99,7 @@ form input{
     color: white;
     font-weight: 500;
     border-radius: 2em;
-    transition: all .2s linear .1s;
+    transition: all .5s linear .1s;
     width: 100%;
     background-color: rgba(255,255,255, .3);
 
@@ -116,6 +118,7 @@ form button{
     border-radius: 2em;
     border: none;
     color: white;
+    cursor: pointer;
 }
 
 form p{
@@ -126,6 +129,7 @@ form a{
     color: gray
 }
 
+
 #content .Block{
     position: absolute;
     width: 150px;
@@ -134,8 +138,42 @@ form a{
     border-radius: 2em;
     box-shadow: .1em .2em .5em rgba(0,0,0,0.1);
     border: .01em solid rgba(255,255,255, .1);
+    border-left: .01em solid rgba(255,255,255,.5);
+    border-top: .01em solid rgba(255,255,255,.5);
+    animation: moving 8s linear infinite;
+    animation-delay : calc(-2s * var(--i));
+    pointer-events: none;
+}
+/*I have no idea why have I to do nx despite x :(*/
+#content .Block:nth-of-type(4n){
+    left:64%;
+    top: 20%;
 }
 
-#content .Block:nth-of-type(1){
-    left: 300px; 
+#content .Block:nth-of-type(4n + 1){
+    left:25%;
+    top: 18%;
+}
+
+#content .Block:nth-of-type(4n + 2){
+    left:15%;
+    top: 50%;
+    width: 190px;;
+    height: 190px;;
+}
+
+#content .Block:nth-of-type(4n + 3){
+    left:44%;
+    top: 66%;
+}
+
+@keyframes moving{
+    0%, 100%
+    {
+        transform: translateY(50px);
+    }
+    50%
+    {
+        transform: translateY(-50px);
+    }
 }
