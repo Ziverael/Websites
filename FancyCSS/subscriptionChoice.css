@@ -1,0 +1,126 @@
+html{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15pt;
+}
+
+:root{
+    --blue: #5aa9e6;
+    --yellow: #ffe45e;
+    --white: #f9f9f9;
+    --lblue: #7fc8f8;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+#container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#color{
+    top:0;
+    left:0;
+    position: absolute;
+    width: 100%;
+    height: 85vh;
+    background-color: var(--blue);
+}
+
+main{
+    position: relative;
+    width: 60%;
+    height: 60vh;
+    display: flex;
+    background-color: var(--white);
+    border-radius: 1.5em;
+    box-shadow: 3px 3px 4px .1px rgb(58, 58, 58);
+    
+}
+
+.offer{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 60px;
+
+}
+
+.offer:nth-of-type(2):before{
+    content: '';
+    top:10%;
+    left:0;
+    position: absolute;
+    width:100%;
+    height:80%;
+    border-left: 1px solid black ;
+    border-right: 1px solid black ;
+    pointer-events: none;
+}
+
+.offer h2{
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.offer p{
+    width:100%;
+    font-size: .9em;
+    padding: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.offer p:first-of-type{
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 1.2em;
+    text-transform: none;
+    text-align: justify;
+    padding: 5px;
+
+}
+
+.offer p:nth-of-type(2){
+    height: 2em;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.offer p:nth-of-type(3){
+    border-bottom: 1px solid black;
+}
+
+.offer button{
+    margin-top: 15px;
+    text-transform: uppercase;
+    padding: .8em 1.6em;
+    font-size: 1em;
+    background-color: var(--lblue);
+    border: none;
+    border-radius:.2em;
+    transition:all .5s;
+}
+
+.offer button#special{
+    background-color: var(--yellow);
+}
+.offer button:hover{
+    background-color: var(--blue);
+}
+
+.offer button#special:hover{
+    background-color: #e0c643;
+}
