@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content=" Zapraszam do zapoznania się z kluczowymi informacjami na temat systemów operacyjnych i sieci komputerowych."/>
+	<meta name="keyword" content="sieci komputerowe, sytemy oepracyjne, informatyka, powtórzenie, matura"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>System operacyjny i sieci komputerowe</title>
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<link rel="stylesheet" href="style_lower.css" type="text/css"/>
+</head>
+<body>
+	<header>
+		<h2>IT by Ziverael</h2>
+	</header>
+	<div id="container">
+		<div class="block">
+			<nav id="webNav">
+				<ul>
+					<li>
+						<div class="tile">
+							<span></span>
+							<a href="#">Systemy operacyjne</a> 
+						</div> 
+						<ul>
+							<li>
+							<div class="tile">
+								<span></span>
+								<a href="#">Historia</a> 
+							</div>
+							</li>
+							<li> 
+							<div class="tile">
+								<span></span>
+								<a href="#">Jądro systemu</a> 
+							</div> 
+							</li>
+						</ul>
+					</li>
+					<li> 
+						<div class="tile">
+							<span></span>
+							<a href="#">Sieci</a> 
+						</div> 
+					
+				
+					
+						<ul>
+							<li> 
+								<div class="tile">
+									<span></span>
+									<a href="#">Podział sieci</a> 
+								</div> 
+								</li>
+								<li> 
+									<div class="tile">
+										<span></span>
+										<a href="#">Protokoły</a> 
+									</div> 
+									</li>
+							
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		
+		<div class="block">
+			<main>
+				<h1 id="Top">Systemy Operacyjne</h1>
+				<p>
+				Komputery na samym początku tworzone były wraz programem, który realizowały. Zmiana programu wiązała się z wymianą komponentów komputera, a to z kolei z dużymi kosztami. Swojego czasu Ken Olson powiedział: „Nie ma żadnego powodu, dla którego ktokolwiek chciałby mieć komputer we własnym domu”. Czas jednak pokazał jak bardzo się mylił, a to wymuszało pewne zmiany w technologii. Tak właśnie zrodził się pomysł stworzenia <b> systemu operacyjnego </b>.<br/>
+				</p>
+				<section id = "OS">
+					<h2>Co to system operacyjny?</h2>
+					<p>
+						System operacyjny (ang. operating system, skrót OS) – oprogramowanie zarządzające systemem komputerowym, tworzące środowisko do uruchamiania i kontroli zadań.
+					</p>
+					<p>W celu uruchamiania i kontroli zadań użytkownika system operacyjny zajmuje się:
+					<ul>
+						<li>
+							planowaniem oraz przydziałem czasu procesora poszczególnym zadaniom,
+						</li>
+						<li>
+							kontrolą i przydziałem pamięci operacyjnej dla uruchomionych zadań,
+						</li>
+						<li>
+							dostarczaniem mechanizmów do synchronizacji zadań i komunikacji pomiędzy zadaniami,
+						</li>
+						<li>
+							obsługą sprzętu oraz zapewnieniem równolegle wykonywanym zadaniom jednolitego, wolnego od interferencji dostępu do sprzętu.
+						</li>
+					</ul>
+					</p>
+
+					<p>Dodatkowe przykładowe zadania, którymi może, ale nie musi, zajmować się system operacyjny to:
+					<ul>
+						<li>
+							ustalanie połączeń sieciowych,
+						</li>
+						<li>
+							zarządzanie plikami.
+						</li>
+					</ul>	
+					</p>
+				</section>
+				<p>
+					Pierwsze systemy operacyjne, choć nie były związane z konkretnym zadaniem, mogły obsługiwać tylko konkretne maszyny, a dokładnie rodziny maszyn. Producenci tworzyli systemy na użytek tylko swoich maszyn. Jednak po pewnym czasie powstały <b> systemy otwarte</b>, czyli związane tylko z listą rozkazów, a nie konkretną maszyną.<br/>
+Na początku komputerów osobistych  opracowano systemy o wiele skromniejsze. Umieszczano je zwykle w jakimś prostym języku- głównie BASIC- i lokowano na pamięci ROM. Tak budowano  <i> ATARI</i>,<i> Commodore</i> czy <i> ZXSpectrum</i>. Pojawienie się dysków twardych i elastycznych stało się impulsem do oprawcowania <b>dyskowych systemów operacyjnych</b>. 
+
+				</p>
+				<p>
+					Główną część systemu operacyjnego jest <b>jądro</b>.
+				</p>
+				<section id = "kernel">
+					<h2>Co to jądro systemy i do czego służy?</h2>
+					<p>
+						Jądro systemu operacyjnego (ang. kernel) – podstawowa część systemu operacyjnego, która jest odpowiedzialna za wszystkie jego zadania. Wyróżnia się kilka podstawowych metod konstrukcji jąder[potrzebny przypis]: jądro monolityczne – często stosowane w systemach typu Unix. Wszystkie zadania są wykonywane przez jądro, będące jednym, dużym programem działającym w trybie jądra. Przykładami takiego jądra mogą być: Linux, OpenBSD, FreeBSD, chociaż większość posiada umiejętność dołączania i odłączania modułów (najczęściej zawierających kod sterownika urządzenia lub obsługi potrzebnego w danej chwili systemu plików). Zaletą tej techniki jest prostota, stabilność[potrzebny przypis], łatwość komunikacji pomiędzy różnymi członami jądra (jedna przestrzeń adresowa). Wadą jest, w późniejszym stadium rozwoju projektu, uciążliwość w rozwijaniu programu oraz w znajdywaniu błędów.
+					</p>
+					<h3>Rodzaje jąder</h3>
+					<p>
+						<ul>
+							<li>
+							    mikrojądro – w tej technice z monolitycznego jądra zostaje tylko jego podstawowa część, a części odpowiedzialne za bardziej wyrafinowane funkcje są wydzielone do funkcjonalnych bloków albo realizowane jako zwykłe procesy w trybie użytkownika.
+							</li>
+							<li>
+    							nanojądro – technika zbliżona do techniki mikrojądra, różnica w wielkości – nanokernel jest jeszcze mniejszy.
+							</li>
+							<li>
+							    exokernel – architektura będąca odmianą nanojądra. Cechą wyróżniającą jest możliwość zarządzania zasobami systemu przez nieuprzywilejowanego użytkownika, a rola jądra sprowadza się do zabezpieczania zasobów. Przykładem systemu korzystającego z tego typu jądra jest system XOK, zbudowany w MIT Laboratory for Computer Science, pracujący na komputerach PC. Wyposażony on został w bibliotekę ExOS, która implementuje system UNIX i umożliwia uruchamianie większości aplikacji tego systemu.
+							</li>
+							<li>
+							    cachekernel – w tej technice jądro systemu buforuje obiekty systemowe takie jak wątki czy przestrzenie adresowe tak jak sprzęt komputerowy buforuje pamięć. Jądra aplikacji trybu użytkownika są odpowiedzialne za ładowanie tych danych i ponowne ich zapisanie stosując specyficzne dla danej aplikacji mechanizmy.
+							</li>
+							<li>
+							    jądro hybrydowe – kompromis między architekturą jądra monolitycznego i mikrojądra. W krytycznych usługach – np. stos sieci – usługi są na stałe wkompilowane w główny kod jądra, inne usługi pozostają oddzielone od głównego jądra i działają jako serwery (w przestrzeni jądra). Dzięki temu rozwiązaniu możliwe jest zachowanie wydajności jądra monolitycznego dla kluczowych usług. Klasyfikacja ta budzi kontrowersje niektórych programistów.
+							</li>
+						</ul>
+					</p>
+					<p>
+						Z budowy jądra wynikają jego cechy, takie jak:
+						<ul>
+							<li>
+							    wielozadaniowość (wieloprocesowość),
+							</li>
+							<li>
+							    wielowątkowość,
+							</li>
+							<li>
+							    wielobieżność,
+							</li>
+							<li>
+							    skalowalność,
+							</li>
+							<li>
+							    wywłaszczalność.
+							</li>
+						</ul>
+					</p>
+
+				</section>
+			</main>
+			<div class="pageButtons">
+				<a href="#"><div class="pButton"><span> Poprzednia strona</span></div></a>
+				<a href="#"><div class="pButton"><span> Na górę</span></div></a>
+				<a href="#"><div class="pButton"><span> Następna strona</span></div></a>
+				
+			</div>
+		</div>
+		<div class="block">
+			<nav class="siteNav">
+			<ul>
+				<li>
+					<div class="tile2"><a href="#Top">Systemy operacyjne</a></div>
+				</li>
+				<li>
+					<div class="tile2"><a href="#OS">Co to jest system operacyjny?</a></div>
+				</li>
+				<li>
+					<div class="tile2"><a href="#kernel">Co to jest jądro systemu i do czego służy?</a></div>
+				</li>
+			</ul>
+			</nav>
+		</div>
+	</div>
+	<footer>
+		<p>Strona jest projektem wykonanym w celach edukacyjnych i jest własnością Krzysztof Jankowskiego. Wartość meretoryczną zaleca się podawanie względem oryginalnych źródeł wymienionych w bibliografii.</p>
+	</footer>
+</body>
+</html>
+<!--
+
+		</div>
+		<br/><img src="img/OS.png" width="340" height="310"/>
+				<br/><img src="img/ker (1).png" width="340" height="310"/><img src="img/ker (2).png" width="340" height="300"/><img src="img/ker (3).png" width="340" height="320"/>
+		<div class="text">
+		<h5><br/><sup>1</sup> Model funkcjonowania jądra monolitycznego. <br/>
+		<sup>2</sup> Model komunikacji jądra hybrydowego z aplikacjami. <br/>
+		<sup>3</sup> Model komunikacji mikrojądra z aplikacjami. <br/></h5>
+		-->
