@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content=" Zapraszam do zapoznania się z kluczowymi informacjami na temat systemów operacyjnych i sieci komputerowych."/>
+	<meta name="keyword" content="sieci komputerowe, sytemy oepracyjne, informatyka, powtórzenie, matura"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>System operacyjny i sieci komputerowe</title>
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<link rel="stylesheet" href="style_lower.css" type="text/css"/>
+</head>
+<body>
+	<header>
+		<h2>IT by Ziverael</h2>
+	</header>
+	<div id="container">
+		<div class="block">
+			<nav id="webNav">
+				<ul>
+					<li>
+						<div class="tile">
+							<span></span>
+							<a href="OS.html">Systemy operacyjne</a> 
+						</div> 
+						<ul>
+							<li>
+							<div class="tile">
+								<span></span>
+								<a href="OSHist.html">Historia</a> 
+							</div>
+							</li>
+							<li> 
+							<div class="tile">
+								<span></span>
+								<a href="#">Jądro systemu</a> 
+							</div> 
+							</li>
+						</ul>
+					</li>
+					<li> 
+						<div class="tile">
+							<span></span>
+							<a href="sieci.html">Sieci</a> 
+						</div> 
+					
+				
+					
+						<ul>
+							<li> 
+								<div class="tile">
+									<span></span>
+									<a href="#">Podział sieci</a> 
+								</div> 
+								</li>
+								<li> 
+									<div class="tile">
+										<span></span>
+										<a href="#">Protokoły</a> 
+									</div> 
+									</li>
+							
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		
+		<div class="block">
+			<main>
+				<h1>Jądro systemu</h1>
+				<p>
+				Jądro systemu, zwane także kernelem, jest fundamentalnym programem do działania systemu, który ma całkowitą kontrolę nad wszelkimi zadaniami systemu. Zarządza ono zadaniami w czterech głównych obszarach systemowych.
+				</p>
+				<section id = "Procesy">
+					<h2>Procesy</h2>
+					<p>
+						Jądro musi określić, który z procesów może w danej chwili korzystać z procesora. Jądro uruchamia, wstrzymuje, ponownie uruchamia i zakańcza pracę procesów. W jednym momencie procesor wykonuje <b> tylko jedno zadanie </b>. Operacja przekazania przez jądro kontroli nad procesorem od jednego do drugiego procesu to <b> przełączanie kontekstu</b>  (ang.  Context switch).
+					</p>
+					<p>
+						Jednak wykonuje je w tak dużym tempie, iż użytkownik ma wrażenie, że wiele procesów działa w jednym momencie (dwa otwarte okienka na pulpicie to już dwa działające procesy mimo działania „w tle”!)- to cecha zwana <b> wielozadaniowością </b> (ang. multitasking).
+					</p>
+					<p>
+						Obecnie komputery wyposażone są w większą liczbę procesorów, niż jeden, a to pozwala na różne sztuczki zwiększające liczbę wykonywanych procesów. Jednak rozważmy działanie pojedynczego procesora. Załóżmy, że procesor działa obecnie w <b> trybie użytkownika</b> (ang. user mode) i zakończył przydzielony mu <b> wycinek czasu</b> (ang. time slice):
+						<ul>
+							<li>
+								I  - W reakcji na sygnał wewnętrznego zegara procesor przerywa pracę aktualnego procesu, przełącza się w<b> tryb jądra </b> (ang. kernel mode) i przekazuje kontrolę do jądra systemu;
+							</li>
+							<li>
+								II - Następuje zapisanie przez jądro aktualnego stanu procesora;
+							</li>
+							<li>
+								III - Jądro wykonuje wszelkie zadania związane z zakończeniem poprzedniego procesu, np. zbiera dane ze strumieni wejścia-wyjścia;
+							</li>
+							<li>
+								IV - Rozpoczyna się przeglądanie obecnie aktywnych procesów i wybiera jeden;
+							</li>
+								V -  Jądro odtwarza stan procesu;
+							<li>
+							</li>
+							<li>
+								VI - Jądro informuje procesor ile otrzyma czasu na zrealizowanie tego zadania;
+							</li>
+							<li>
+								VII - Jądro przechodzi w <b> tryb użytkownia </b> i przekazuje kontrolę nad procesem procesorowi.
+							</li>
+						</ul>
+
+					</p>
+				</section>
+				<section id = "Pamiec">
+					<h2>Pamięć</h2>
+					<p>
+						Ze względu, że jądro musi zarządzać pamięcią podczas <b>przełączania kontekstu</b>, to musi przejąć zadanie nad ogólnym zarządzaniem pamięcią. Jest to dość skomplikowanie zadanie, więc wspomaga go <b>moduł zarządzania pamięcią MMU</b>. Dzięki temu jądro korzysta z<b> pamięci wirtualnej </b> co pozwala mu traktować komputer, jakby miał dostęp do całości jego pamięci, a moduł, przechwytuje każdą próbę dostania się do pamięci, z której procesy nie mogą korzystać i samemu je mapuje.
+					</p>
+				</section>
+				<section id = "Sterowniki">
+					<h2>Sterowniki urządzeń</h2>
+					<p>
+						Jądro także pośredniczy podczas korzystania z wszelkich urządzeń zewnętrznych, ponieważ niewłaściwa ich obsługa mogłaby doprowadzić do krytycznego błędu, np. gdyby jakieś urządzenie próbowało z własnej woli odłączyć zasilanie.
+					</p>
+				</section>
+				<section id = "Wywolania">
+					<h2>Wywołania systemowe</h2>
+					<p>
+						To jedne procesów, które udostępniają użytkownikowi zadania, które nie są dostępne w trybie użytkownika, a bywają dość istotne. To bardzo specyficzna grupa procesów, które kontroluje jądro systemu. Przykładami mogą być:
+						<ul>
+							<li>
+								fork() - gdy proces wywołuje funkcję <i>fork()</i> , to jądro systemu tworzy kopię danego procesu.
+							</li>
+							<li>
+								exec() - gdy proces wywołuje funkcję <i>exec(program)</i> , to jądro systemu uruchamia <i>program</i>, który zastępuje aktualny proces.
+							</li>
+						</ul>
+					</p>
+				</section>
+			</main>
+		</div>
+		<div class="block">
+			<nav class="siteNav">
+			<ul>
+				<li>
+					<a href="#Procesy"><div class="tile2">Procesy</div></a>
+				</li>
+				<li>
+					<div class="tile2"><a href="#Pamiec">Pamięć</a></div>
+				</li>
+				<li>
+					<div class="tile2"><a href="#Sterowniki">Sterowniki urządzeń</a></div>
+				</li>
+				<li>
+					<div class="tile2"><a href="#Wywolania">Wywołania systemowe</a></div>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<div class="pageButtons">
+	<a href="OSHist2.html"><div class="pButton"><span> Poprzednia strona</span></div></a>
+	<a href="#"><div class="pButton"><span> Na górę</span></div></a>
+	<a href="sieci.html"><div class="pButton"><span> Następna strona</span></div></a>
+	
+</div>
+<footer>
+	<p>Strona jest projektem wykonanym w celach edukacyjnych i jest własnością Krzysztof Jankowskiego. Wartość meretoryczną zaleca się podawanie względem oryginalnych źródeł wymienionych w bibliografii.</p>
+	</footer>
+</body>
+</html>

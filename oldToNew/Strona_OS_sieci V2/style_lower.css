@@ -69,7 +69,7 @@ main{
     left: 2px;
     right: 2px;
     bottom: 2px;
-    /*pointer-events: none;*/
+    pointer-events: none;
 }
 
 #webNav .tile:before{
@@ -91,6 +91,7 @@ main{
     filter: blur(10px);
     background: linear-gradient(45deg, rgb(83, 83, 83), rgb(29, 29, 29));
     transition: all 2s linear .1s;/*Why doesn't work?*/
+    pointer-events: none;
 }
 
 #webNav .tile:hover{
@@ -237,4 +238,60 @@ section h2{
 
 .tile2:hover::after{
     clip-path: circle(200% at 0 0);
+}
+
+figure{
+    position:relative;
+    float:right;
+    clear: right;
+    /*background: radial-gradient(circle at center, white, rgba(255,255,255,.7) 80%);*/
+    padding: .3em;
+    margin: 0 0 50px 50px;
+    overflow: hidden;
+    /*border: .3em solid var(--ryellow);*/
+}
+
+figure:before{
+    content:'';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(0, var(--yellow), var(--nblue));
+    animation: 4s linear infinite borderGlow;
+}
+
+figure:after{
+    content:'';
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 96%;
+    height: 96%;
+    background-color: white;
+}
+
+figure img{
+    position: relative;
+    z-index:1;
+}
+
+@keyframes borderGlow{
+    0%{
+    transform: rotate(0);
+    }
+    25%{
+    transform: rotate(90deg);
+}
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+
 }

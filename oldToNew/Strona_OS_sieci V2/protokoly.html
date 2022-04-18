@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content=" Zapraszam do zapoznania się z kluczowymi informacjami na temat systemów operacyjnych i sieci komputerowych."/>
+	<meta name="keyword" content="sieci komputerowe, sytemy oepracyjne, informatyka, powtórzenie, matura"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>System operacyjny i sieci komputerowe</title>
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<link rel="stylesheet" href="style_lower.css" type="text/css"/>
+</head>
+<body>
+	<header>
+		<h2>IT by Ziverael</h2>
+	</header>
+	<div id="container">
+		<div class="block">
+			<nav id="webNav">
+				<ul>
+					<li>
+						<div class="tile">
+							<span></span>
+							<a href="OS.html">Systemy operacyjne</a> 
+						</div> 
+						<ul>
+							<li>
+							<div class="tile">
+								<span></span>
+								<a href="OSHist.html">Historia</a> 
+							</div>
+							</li>
+							<li> 
+							<div class="tile">
+								<span></span>
+								<a href="kernel.html">Jądro systemu</a> 
+							</div> 
+							</li>
+						</ul>
+					</li>
+					<li> 
+						<div class="tile">
+							<span></span>
+							<a href="sieci.html">Sieci</a> 
+						</div> 
+					
+				
+					
+						<ul>
+							<li> 
+								<div class="tile">
+									<span></span>
+									<a href="Podzial_sieci.html">Podział sieci</a> 
+								</div> 
+								</li>
+								<li> 
+									<div class="tile">
+										<span></span>
+										<a href="protokoly.html">Protokoły</a> 
+									</div> 
+									</li>
+							
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		
+		<div class="block">
+			<main>
+				<h1>Protokoły sieciowe</h1>
+				<p>
+					W celu komunikacji między różnymi protokołami wykorzystuje <b>łącza</b> (ang. gateway) - czyli urządzenia, które tłumaczącą rozkazy jednego protokołu na drugi. Należy pamiętać, że używanie łącz może spowolnić w znacznym stopniu komunikację pomiędzy systemami. Kolejnym rozwiązaniem może być skonfigurowanie komputerów w taki sposób, by wykorzystywały kilka protokołów równocześnie, jednak i to rozwiązanie może prowadzić do dodatkowego obciążania sieci.
+				</p>
+				<p>
+					Ze względu, iż preferujemy używanie Internetu, więc najlepiej zacząć omawianie od protokołów <b> modelu TCP/IP</b>.
+				</p>
+				<section id = "TCPIP">
+					<h2>TCP/IP</h2>
+					<p>
+						TCP/IP - (ang. Transmission Control Protocol / Internet Protocol) to zespół protokołów sieciowych używany w sieci Internet. Najczęściej wykorzystują go systemy Unixowe oraz systemy Windows, choć można stosować go również w systemach Novell NetWare. Zadanie protokołu TCP/IP polega na dzieleniu danych na pakiety odpowiedniej wielkości, ponumerowaniu ich w taki sposób, aby odbiorca mógł sprawdzić, czy dotarły wszystkie pakiety oraz ustawieniu ich we właściwej kolejności. Kolejne partie informacji wkładane są do kopert TCP, a te z kolei umieszczane są w kopertach IP.
+					</p>
+					<p>
+						Oprogramowanie TCP po stronie odbiorcy zbiera wszystkie nadesłane koperty, odczytując przesłane dane. Jeśli brakuje którejś koperty, wysyła żądanie ponownego jej dostarczenia. Pakiety wysyłane są przez komputery bez uprzedniego sprawdzenia, czy możliwa jest ich transmisja. Może się zdarzyć taka sytuacja, że do danego węzła sieci, gdzie znajduje się router, napływa więcej pakietów, aniżeli urządzenie może przyjąć, posegregować i przesłać dalej.
+					</p>
+					<p>
+						Każdy router posiada bufor, który gromadzi pakiety czekające na wysłanie. Gdy bufor ulegnie całkowitemu zapełnieniu, nowo nadchodzące pakiety zostaną odrzucone i bezpowrotnie przepadną. Protokół, który obsługuje kompletowanie pakietów zażąda więc wtedy ponownego ich wysłania.
+					</p>
+				</section>
+				<section id = "IP">
+					<h2>IP</h2>
+					<p>
+						IP - (ang. Internet Protocol) to protokół do komunikacji sieciowej, gdzie komputer klienta wysyła żądanie, podczas gdy komputer serwera je wypełnia. Protokół ten wykorzystuje adresy sieciowe komputerów zwane adresami IP. Są to 32-bitowa liczby zapisywana jako sekwencje czterech ośmiobitowych liczb dziesiętnych (mogących przybierać wartość od 0 do 255), oddzielonych od siebie kropkami.
+					</p>
+					<p>
+						Adres IP dzieli się na dwie części: identyfikator sieciowy (network id) i identyfikator komputera (host id). Istnieje kilka klasy adresowych, o różnych długościach obydwu składników. Obowiązujący obecnie sposób adresowania ogranicza liczbę dostępnych adresów, co przy bardzo szybkim rozwoju Internetu jest dla niego istotnym zagrożeniem. W celu ułatwienia zapamiętania adresów wprowadzono nazwy symboliczne, które tłumaczone są na adresy liczbowe przez specjalne komputery w sieci, zwane serwerami DNS.
+					</p>
+				</section>
+				<section id ="FTP">
+					<h2>FTP</h2>
+					<p>
+						FTP - (ang. File Transfer Protocol) to protokół służący do transmisji plików. Przeważnie usługę ftp stosuje do przesyłania danych z odległej maszyny do lokalnej lub na odwrót. Protokół ten działa w oparciu o zasadę klient-serwer i korzystanie z usługi polega na użyciu interaktywnej aplikacji. Technologia FTP zapewnia ochronę stosując hasła dostępu.
+					</p>
+				</section>
+				<section id = "DNS">
+					<h2>DNS</h2>
+					<p>
+						DNS - (ang. Domain Name Service) protokół używany w sieci Internet obsługujący system nazywania domen. Umożliwia on nadawanie nazw komputerom, które są zrozumiałe i łatwe do zapamiętania dla człowieka, tłumacząc je na adresy IP. Nazywany czasem usługą BIND (BSD UNIX), DNS oferuje hierarchiczną, statyczną usługę rozróżniania nazw hostów. Administratorzy sieci konfigurują DNS używając listę nazw hostów oraz adresów IP.
+					</p>
+					<p>
+						DNS nie posiada centralnego repozytorium przechowującego adresy IP maszyn w sieci. Dane dotyczące tych adresów dzielone są między wiele komputerów, zwanych serwerami DNS (nazw domenowych), które są zorganizowane hierarchicznie w formie drzewa. Początek drzewa nazywany jest korzeniem. Nazwy najwyższego poziomu składają się z dwuliterowych domen narodowych opartych na zaleceniach ISO 3166 (wyjątek stanowi brytyjska domen uk).
+					</p>
+				</section>
+				<section id = "DHCP">
+					<h2>DHCP</h2>
+					<p>
+						DHCP - (ang. Dynamic Host Configuration Protocol) to standardowy protokół przydzielający adresy IP poszczególnym komputerom. Serwer DHCP przypisuje adresy IP poszczególnym końcówkom.
+					</p>
+				</section>
+				<section id = "ARP">
+					<h2>ARP</h2>
+					<p>
+						ARP - (ang. Address Resolution Protocol) to protokół sieciowy należący do rodziny TCP/IP (lecz niezwiązany wprost z transportowaniem danych). Jest on stosowany w celu dynamicznego określania fizycznych adresów niskiego poziomu, które odpowiadają adresom IP poziomu wyższego dla określonego komputera Protokół ten ogranicza się do fizycznych systemów sieciowych, które obsługują emisję pakietów.
+					</p>
+				</section>
+				<section id ="HTTP">
+					<h2>HTTP</h2>
+					<p>
+						HTTP - (ang. HyperText Transfer Protocol) to protokół internetowy, używany do obsługi stron WWW. HTTP stanowi podstawowy protokół, przy pomocy którego przebiega komunikacja między klientami i serwerami sieci Web. Jest to protokół poziomu aplikacji dla współpracujących ze sobą, hipermedialnych, rozproszonych systemów informacyjnych. HTTP jest bezstanowym i generycznym protokołem zorientowanym obiektowo.
+					</p>
+					<p>
+						Cechą charakterystyczną tego protokołu możliwość wpisywania oraz negocjowania reprezentacji danych, co umożliwia budowę systemów niezależnie od typu transferowanych danych.
+					</p>
+				</section>
+				<section id = "ICMP">
+					<h2>ICMP</h2>
+					<p>
+						ICMP - (ang. Internet Control Message Protocol) jest to rozszerzenie protokołu IP (Internet Protocol). Protokół ICMP służy generowaniu komunikatów o występujących błędach, wysyłaniu pakietów testowych oraz komunikatów diagnostycznych związanych z protokołem IP.
+
+					</p>
+				</section>
+				<p>
+					Oczywiście protokołów jest znacznie więcej niż wyżej wymienione, ponieważ ich gamma zastosowań jest znacznie szersza.  Jednak to jedne z podstawowych protokołów, z którymi warto się zaznajomić.
+
+				</p>
+			</main>
+		</div>
+		<div class="block">
+			<nav class="siteNav">
+			<ul>
+				<li>
+					<a href="#TCPIP"><div class="tile2">TCP/IP</div></a>
+				</li>
+				<li>
+					<div class="tile2"><a href="#IP">IP</a></div>
+				</li>
+				<li>
+					<div class="tile2"><a href="#FTP">FTP</a></div>
+				</li>
+				<li>
+					<div class="tile2"><a href="#DNS">DNS</a></div>
+				</li>
+				<li>
+					<div class="tile2"><a href="#DHCP">DHCP</a></div>
+				</li>		
+				<li>
+					<div class="tile2"><a href="#ARP">ARP</a></div>
+				</li>
+				<li>
+					<div class="tile2"><a href="#HTTP">HTTP</a></div>
+				</li>		<li>
+					<div class="tile2"><a href="#ICMP">ICMP</a></div>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<div class="pageButtons">
+	<a href="Podzial_sieci.html"><div class="pButton"><span> Poprzednia strona</span></div></a>
+	<a href="#"><div class="pButton"><span> Na górę</span></div></a>
+	<a href="#"><div class="pButton"><span> Następna strona</span></div></a>
+	
+</div>
+<footer>
+	<p>Strona jest projektem wykonanym w celach edukacyjnych i jest własnością Krzysztof Jankowskiego. Wartość meretoryczną zaleca się podawanie względem oryginalnych źródeł wymienionych w bibliografii.</p>
+	</footer>
+</body>
+</html>
