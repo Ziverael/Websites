@@ -99,24 +99,23 @@
 							oprogramowanie – programy komputerowe zainstalowane na hostach, serwerach i innych urządzeniach sieciowych
 						</li>
 					</ul>
-					</p>
-				</section>
-				<p>
-					<b>Zasoby sieciowe</b> to wszelkiego rodzaju dane i urządzenia, do których można uzyskać dostep w obrębie sieci. Przykładem zasobu jest folder innego użytkownika, serwer plików w pracowni szkolnej, program jak i drukarka przeznaczona do wspólnego użytkowania.
-					Niezmiernie ważnym aspektem  jest sposób komunikacji między komputerami w sieci. Przecież każdy różni się (i to często niezmiernie poważnie od pozostałych komputerów w sieci), więc należałoby ustalić sposób komunikacji, który będzie umożliwiał komunikację ich wszystkich. Dla zapewnienia <b>interoperacyjności</b>, znaczy współpracy wszystkich składowych sieci komputerowej stworzono teoretyczny model, nazwany <b>Modelem warstwowym OSI</b>. Niedługo po tym powstał kolejny model, a dokładnie <b>model TCP/IP</b>. Tu pojawia się także pojęcie <b> protokołu komunikacyjnego</b>, czyli ścisłego zbioru reguł i kroków postępowania, wykorzystywanych przez urządzenia komunikacyjne w celu nawiązania łączności i wymiany danych.
 				</p>
-				<section id = "OSI">
-					<h2>Modele OSI</h2>
-					<figure>
-						<img src="img/enkapsulacja.png" width="700" height="300"/>
-					</figure>
-					<figure>
-						<img src="img/OSI_TCPIP.png" width="700" height="400"/>
-					</figure>
-					<p>
-						Model OSI jest modelem przygotowanym z myślą o tworzeniu tzw. „otwartego systemu”, który nie będzie należał do żadnej zamkniętej sieci. Szybki rozwój sieci Internet opartej na modelu TCP/IP spowolnił jednak znacznie jego wdrażanie. Mimo tego udało się stosując model OSI wdrożyć kilka istotnych protokołów. W przeciwieństwie do modelu TCP/IP, składa się on z siedmiu warstw:
-						<ul>
-							<li>
+			</section>
+			<p>
+				<b>Zasoby sieciowe</b> to wszelkiego rodzaju dane i urządzenia, do których można uzyskać dostep w obrębie sieci. Przykładem zasobu jest folder innego użytkownika, serwer plików w pracowni szkolnej, program jak i drukarka przeznaczona do wspólnego użytkowania.
+				Niezmiernie ważnym aspektem  jest sposób komunikacji między komputerami w sieci. Przecież każdy różni się (i to często niezmiernie poważnie od pozostałych komputerów w sieci), więc należałoby ustalić sposób komunikacji, który będzie umożliwiał komunikację ich wszystkich. Dla zapewnienia <b>interoperacyjności</b>, znaczy współpracy wszystkich składowych sieci komputerowej stworzono teoretyczny model, nazwany <b>Modelem warstwowym OSI</b>. Niedługo po tym powstał kolejny model, a dokładnie <b>model TCP/IP</b>. Tu pojawia się także pojęcie <b> protokołu komunikacyjnego</b>, czyli ścisłego zbioru reguł i kroków postępowania, wykorzystywanych przez urządzenia komunikacyjne w celu nawiązania łączności i wymiany danych.
+			</p>
+			<section id = "OSI">
+				<h2>Modele OSI</h2>
+				<figure class = "big">
+					<div class="figholder">
+						<img src="img/enkapsulacja.png"/>
+					</div>
+				</figure>
+				<p>
+					Model OSI jest modelem przygotowanym z myślą o tworzeniu tzw. „otwartego systemu”, który nie będzie należał do żadnej zamkniętej sieci. Szybki rozwój sieci Internet opartej na modelu TCP/IP spowolnił jednak znacznie jego wdrażanie. Mimo tego udało się stosując model OSI wdrożyć kilka istotnych protokołów. W przeciwieństwie do modelu TCP/IP, składa się on z siedmiu warstw:
+					<ul>
+						<li>
 								warstwy aplikacji - umożliwiającej komunikację z użytkownikiem (strony WWW, poczta elektroniczna);
 							</li>
 							<li>
@@ -127,14 +126,14 @@
 							</li>
 							<li>
 								warstwy transportowej - odpowiedzialnej za integralność (czyli spójność) transmisji danych;
-
+								
 							</li>
 							<li>
 								warstwy sieci - zajmującej się określaniem trasy przepływu danych;
-
+								
 							</li>
 							<li>
-								   warstwy łącza danych - opisującej metody wymiany ramek pomiędzy urządzeniami podłączonymi do tego samego medium (np. do przełącznika);
+								warstwy łącza danych - opisującej metody wymiany ramek pomiędzy urządzeniami podłączonymi do tego samego medium (np. do przełącznika);
 							</li>
 							<li>
 								warstwy fizycznej - sterującej przepływem bitów poprzez media sieciowe.
@@ -142,25 +141,25 @@
 						</ul>
 					</p>
 					<p>
-					   W modelu warstwowym komunikacja polega na przekazywaniu danych pomiędzy warstwami. Proces „przechodzenia” danych z warstwy wyższej do niższej nazwany jest enkapsulacją. Dodatkowo, w procesie tym dodawane są do pakietów informację niezbędne do właściwego przesyłu, i tak:
-					   <ul>
-						   <li>
-							w warstwie transportowej - dane dzielone są na segmenty (jednostki PDU) i opatrywane nagłówkiem zawierającym numer portu aplikacji;
-
-						   </li>
-						   <li>
-							w warstwie sieciowej - tworzony jest pakiet poprzez dodawanie nagłówka zawierającego adresy IP nadawcy i odbiorcy;
-
-						   </li>
-						   <li>
-							w warstwie łącza - danych tworzona jest ramka poprzez dodanie nagłówka zawierającego adresy fizyczne (MAC) nadawcy i odbiorcy;
-
-						   </li>
-						   <li>
-							w warstwie fizycznej - następuje kodowanie ramki i przesłanie jej do odbiorcy.
-
-						   </li>
-					   </ul>
+						W modelu warstwowym komunikacja polega na przekazywaniu danych pomiędzy warstwami. Proces „przechodzenia” danych z warstwy wyższej do niższej nazwany jest enkapsulacją. Dodatkowo, w procesie tym dodawane są do pakietów informację niezbędne do właściwego przesyłu, i tak:
+						<ul>
+							<li>
+								w warstwie transportowej - dane dzielone są na segmenty (jednostki PDU) i opatrywane nagłówkiem zawierającym numer portu aplikacji;
+								
+							</li>
+							<li>
+								w warstwie sieciowej - tworzony jest pakiet poprzez dodawanie nagłówka zawierającego adresy IP nadawcy i odbiorcy;
+							   
+							</li>
+							<li>
+								w warstwie łącza - danych tworzona jest ramka poprzez dodanie nagłówka zawierającego adresy fizyczne (MAC) nadawcy i odbiorcy;
+								
+							</li>
+							<li>
+							   w warstwie fizycznej - następuje kodowanie ramki i przesłanie jej do odbiorcy.
+							   
+							</li>
+						</ul>
 					</p>
 				</section>
 				<section id ="tcpip">
@@ -183,12 +182,40 @@
 						</ul>
 					</p>
 				</section>
-
+				<section id = "vs">
+					<h2>Jaka różnica?</h2>
+					<figure class = "big">
+						<div class="figholder">
+							<img src="img/OSI_TCPIP.png"/>
+						</div>
+					</figure>
+					<p>
+						Pomimo różnic w każdym z tych modeli pojawiają się te same protokoły oraz urządzenia sieciowe co widać na zamieszczonej poniżej tabeli.
+					</p>
+						Obecnie najczęściej wykorzystywane są sieci (w tym Internet) oparte o rodzinę protokołów <b> TCP/IP</b>. W użyciu funkcjonują dwie wersje protokołu IP:
+						<ul>
+							<li>
+								<i>IPv4</i>
+							</li>
+							<li>
+								<i>IPv6</i>
+							</li>
+						</ul>
+						<figure class="big">
+							<div class="figholder">
+								<img src="img/siecitab.png">
+							</div>
+						</figure>
+					<p>
+						Różnica pomiędzy nimi polega na definiowaniu <b>adresu sieciowego</b>. Każda maszyna włączająca się do sieci otrzymuje <b>adres IP</b>, który jest jednorazowy, który może się zmieniać każdorazowo przy logowaniu do sieci. W Wersji <i>IPv4</i> składa się z 4 liczb z zakresu od 0 do 255, a w <i>IPv6</i> z 6 takich liczb. Obecnie znacznie powszechniejszy jest adres <i>IPv4</i>, ponieważ, nie są razem kompatybilne. Jednak z czasem ulegnie to zmianie, ponieważ coraz większa ilość maszyn w sieci powoduje, że liczba adresów utworzonych z 4 liczb, może wkrótce się wyczerpać.
+Pozostaje jeszcze <b>adres MAC</b>, który jest unikatowy dla każdej maszyny, ponieważ zostaje zaimplementowany do <b>karty sieciowej</b> podczas jej produkcji. Jednak z przyczyn telekomunikacyjnych, to ten pierwszy adres przy komunikacji gra pierwsze skrzypce.
+					</p>
+				</section>
 			</main>
 		</div>
 		<div class="block">
 			<nav class="siteNav">
-			<ul>
+				<ul>
 				<li>
 					<a href="#Siec"><div class="tile2">Co to sieć komputerowa?</div></a>
 				</li>
@@ -197,6 +224,9 @@
 				</li>
 				<li>
 					<div class="tile2"><a href="#tcpip">Model TCP/IP</a></div>
+				</li>
+				<li>
+					<div class="tile2"><a href="#vs">Jaka różnica?</a></div>
 				</li>
 			</ul>
 		</nav>
@@ -210,17 +240,6 @@
 </div>
 <footer>
 	<p>Strona jest projektem wykonanym w celach edukacyjnych i jest własnością Krzysztof Jankowskiego. Wartość meretoryczną zaleca się podawanie względem oryginalnych źródeł wymienionych w bibliografii.</p>
-	</footer>
+</footer>
 </body>
 </html>
-<!--
-
-		
-		Pomimo różnic w każdym z tych modeli pojawiają się te same protokoły oraz urządzenia sieciowe co widać na zamieszczonej poniżej tabeli.</div>
-		<br/><br/><img src="img/siecitab.png" width="700" height="400"/>
-		<br/><br/><div class="text"> Obecnie najczęściej wykorzystywane są sieci (w tym Internet) oparte o rodzinę protokołów <b> TCP/IP</b>. W użyciu funkcjonują dwie wersje protokołu IP:<br/> 
-<i>IPv4</i><br/>
-<i>IPv6</i><br/>
-Różnica pomiędzy nimi polega na definiowaniu <b>adresu sieciowego</b>. Każda maszyna włączająca się do sieci otrzymuje <b>adres IP</b>, który jest jednorazowy, który może się zmieniać każdorazowo przy logowaniu do sieci. W Wersji <i>IPv4</i> składa się z 4 liczb z zakresu od 0 do 255, a w <i>IPv6</i> z 6 takich liczb. Obecnie znacznie powszechniejszy jest adres <i>IPv4</i>, ponieważ, nie są razem kompatybilne. Jednak z czasem ulegnie to zmianie, ponieważ coraz większa ilość maszyn w sieci powoduje, że liczba adresów utworzonych z 4 liczb, może wkrótce się wyczerpać.<br/>
-Pozostaje jeszcze <b>adres MAC</b>, który jest unikatowy dla każdej maszyny, ponieważ zostaje zaimplementowany do <b>karty sieciowej</b> podczas jej produkcji. Jednak z przyczyn telekomunikacyjnych, to ten pierwszy adres przy komunikacji gra pierwsze skrzypce.
-</html>-->

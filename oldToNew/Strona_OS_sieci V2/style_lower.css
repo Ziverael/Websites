@@ -122,7 +122,7 @@ main p{
 }
 
 section{
-    border-left: 4px solid white;
+    border-left: 4px solid var(--ryellow);
     padding: 10px 20px 30px 40px;
     margin-bottom: 5vh;
 }
@@ -242,6 +242,11 @@ section h2{
 
 figure{
     position:relative;
+    width: 40%;
+    min-width: 250px;
+    min-height: 250px;
+    max-height: 550px;
+    aspect-ratio: 1.2 /1;
     float:right;
     clear: right;
     /*background: radial-gradient(circle at center, white, rgba(255,255,255,.7) 80%);*/
@@ -249,6 +254,16 @@ figure{
     margin: 0 0 50px 50px;
     overflow: hidden;
     /*border: .3em solid var(--ryellow);*/
+}
+
+
+figure.big{
+    width: 60%;
+    min-width: 650px;
+    float:bottom;
+    /*min-height: 250px;
+    max-height: 550px;*/
+    aspect-ratio: 1.6 /1;
 }
 
 figure:before{
@@ -262,18 +277,25 @@ figure:before{
     animation: 4s linear infinite borderGlow;
 }
 
-figure:after{
-    content:'';
+.figholder{
     position: absolute;
-    top: 2%;
-    left: 2%;
-    width: 96%;
-    height: 96%;
+    top: 1%;
+    left: 1%;
+    width: 98%;
+    height: 98%;
     background-color: white;
+    overflow: hidden;
 }
 
 figure img{
     position: relative;
+    width: 96%;
+    height: 96%;
+    min-height: 250px;
+    max-height: 550px;
+    aspect-ratio: 1.3/1;
+    top: 2.5%;
+    left: 2%;
     z-index:1;
 }
 
@@ -294,4 +316,8 @@ figure img{
         transform: rotate(360deg);
     }
 
+}
+
+h1, h2{
+    color: var(--ryellow)
 }
