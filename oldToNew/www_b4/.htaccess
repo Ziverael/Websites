@@ -1,0 +1,13 @@
+﻿###PROTECT FILES###
+<FilesMatch"\.(htaccess|htpasswd|ini|fla|psd|log|sh)$">
+Order Allow, Deny
+Deny from all
+</FilesMatch>
+
+RewriteEngine on
+RewriteRule kim-jestem index.html
+RewriteRule wyksztalcenie mojewyksztalcenie.html
+RewriteRule moje-zainteresowania mojapasja.html
+RewriteRule dlaczego-jestem-dobrym-kandydatem dlaczegoja.html
+RewriteRule moje-CV-i-sukcesy CV.html
+RewriteRule wiecej-informacji-kontakt-mailowy kontakt.html
