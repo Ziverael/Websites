@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main.css') }}">    
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/index.css') }}">    
+    <title>Game Score</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="" alt="Website logo!">
+        </div>
+        <div id="account">
+            {% if user %}
+            <img src="" alt="user picture">
+            <a href="#">Logout</a>
+            {% else %}
+            <img src="" alt="No user picture">
+            <a href="#">Log in</a>
+            {% endif %}
+        </div>
+    </header>
+    
+    <div id="container">
+        
+        <div id="rank">
+            <span>
+            </span>
+            <ol>
+                <a href="#"><li>Elex</li></a>
+                <a href="#"><li>Doom</li></a>
+                <a href="#"><li>StarCraft 2</li></a>
+                <a href="#"><li>Potion Craft</li></a>
+                <a href="#"><li>Machinarium</li></a>
+            </ol>
+            
+        </div>
+        <div id="linkBox"></div>
+        <a href="#">
+            <div class="genre g1">
+                <div class="g1">
+                    <p>MMO RPG</p>
+                </div>
+            </div>
+        </a>
+        
+        <a href="#">
+            <div class="genre g2">
+                <div class="g2">
+                <p>Shoter</p>
+            </div>
+        </div>
+    </a>
+    
+    <a href="#">
+        <div class="genre g3">
+            <div class="g3">
+                <p>Strategie</p>
+            </div>
+        </div>
+    </a>
+    
+    <a href="#">
+        <div class="genre g4">
+            <div class="g4">
+                <p>Przygodowe</p>
+            </div>
+        </div>
+    </a>
+    
+    <a href="#">
+        <div class="genre g5">
+            <div class="g5">
+                <p>Hack&Slash</p>
+            </div>
+        </div>
+    </a>
+</div>
+</body>
+<script src="{{ url_for('static', filename = 'js/show_linkBox.js')}}" type="text/javascript"></script>
+</html>

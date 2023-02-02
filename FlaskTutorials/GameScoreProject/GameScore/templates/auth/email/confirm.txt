@@ -1,0 +1,11 @@
+Dear {{User.username}},
+
+Welcome to GameScore reviews community! We're glad, You decided to join us.
+Before we start our journey, please confirm the email by following this link:
+
+{{ url_for('auth.confirm', token = token, _external = True) }}
+
+Sincerely,
+GameScore Team
+
+Note: replies to this email address are not monitored

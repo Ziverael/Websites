@@ -1,0 +1,226 @@
+body{
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    flex-grow: .1;
+    min-height: 80px;
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+}
+
+.logo{
+    width : 100px;
+}
+
+#container{
+    position: relative;
+    flex-grow: .9;
+}
+
+.genre{
+    position: absolute;
+}
+
+.genre, #rank{
+    display: flex;
+}
+
+.genre div{
+    width: 300px;
+    height: 250px;
+    position: relative;
+    background: linear-gradient(0deg, rgb(39, 39, 39), rgb(84, 83, 83));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s linear .2s;/*Why it doesn't work for background?*/
+}
+
+
+.genre div:before{
+    content: '';
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 96%;
+    height: 96%;
+    background: linear-gradient(0deg, rgb(0, 0, 0), rgb(52, 52, 52));
+    
+}    
+
+.genre div:after{
+    content: '';
+    position: absolute;
+    top: 2%;
+    left: 52%;
+    width: 46%;
+    height: 96%;
+    background-color: rgb(255, 255, 255, .01);
+}
+
+
+.genre p{
+    z-index: 1;
+}
+
+.genre.g1{
+    top: 100px;
+    left: 0;
+}
+
+
+.genre .g1:hover{
+    background: linear-gradient(0deg, var(--pink), var(--light_pink));
+    box-shadow: 5px 5px 20px var(--light_pink);
+}    
+
+.genre .g1:hover p{
+    color: var(--pink);
+    text-shadow: 1px 1px 1em var(--light_pink);
+    transition: all .2s linear .2s;
+}
+
+.genre.g2{
+    top: 0;
+    left: 500px;
+}
+
+.genre .g2:hover{
+    background: linear-gradient(0deg, var(--yellow), var(--light_yellow));
+    box-shadow: 5px 5px 20px var(--light_yellow);
+}    
+
+
+.genre .g2:hover p{
+    color: var(--yellow);
+    text-shadow: 1px 1px 1em var(--light_yellow);
+    transition: all .2s linear .2s;
+}
+
+.genre.g3{
+    top: 500px;
+    left: 700px;
+}
+
+.genre .g3:hover{
+    background: linear-gradient(0deg, var(--violet), var(--light_violet));
+    box-shadow: 5px 5px 20px var(--light_violet);
+}    
+
+
+.genre .g3:hover p{
+    color: var(--violet);
+    text-shadow: 1px 1px 1em var(--light_violet);
+    transition: all .2s linear .2s;
+}
+
+
+.genre.g4{
+    top: 0;
+    left: 1500px;
+}
+
+.genre .g4:hover{
+    background: linear-gradient(0deg, var(--red), var(--light_red));
+    box-shadow: 5px 5px 20px var(--light_red);
+}    
+
+
+.genre .g4:hover p{
+    color: var(--red);
+    text-shadow: 1px 1px 1em var(--light_red);
+    transition: all .2s linear .2s;
+}
+
+.genre.g5{
+    top: 1000px;
+    left: 100px;
+}
+
+.genre .g5:hover{
+    background: linear-gradient(0deg, var(--blue), var(--light_blue));
+    box-shadow: 5px 5px 20px var(--light_blue);
+}    
+
+
+.genre .g5:hover p{
+    color: var(--blue);
+    text-shadow: 1px 1px 1em var(--light_blue);
+    transition: all .2s linear .2s;
+}
+
+
+#rank{
+    position: relative;
+    width: 450px;
+    height: 300px;
+    overflow: hidden;
+    padding-left: 50px;
+    line-height: 1.5em;
+    
+}
+
+#rank a{
+    color: white;
+    transition: all .2s linear .2s;
+}
+
+#rank a:hover{
+    text-shadow: 1px 1px 1em white;
+    font-size: 1.2em;
+}
+
+#rank:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--pink), var(--violet));
+}
+
+#rank:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--pink), var(--violet));
+    filter: blur(10px);
+}
+
+#rank span{
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    top: 6px;
+    bottom: 6px;
+    background-color: rgba(0, 0, 0, .5);
+        
+} 
+
+#rank ol, li{
+    z-index: 1;
+}
+
+#rank p{
+    color: blue;
+    z-index: 2;
+}
+
+#linkBox{
+    position: absolute;
+    display: none;
+    background-color: blueviolet;
+    width: 200px;
+    height: 150px;
+
+
+}

@@ -1,0 +1,24 @@
+{% extend base.html %}
+
+{% block main_section %}
+<h2> Logowanie </h2>
+<form action="" method = "get">
+    <div class="input">
+        <label for="email">E-mail:</label>
+        <input type="mail" placeholder="E-mail" name = "email" id = "email" required>
+    </div>
+    <div class="input">
+        <label for="password">Hasło:</label>
+        <input type="password" required>
+    </div>
+    <div class="input">
+        <label for="remember_me">Nie wylogowuj mnie!</label>
+        <input type="checkbox">
+    </div>
+    <div class="input">
+        <label for=""></label>
+        <input type="checkbox">
+    </div>
+    <button class = "submit"></button>
+</form>
+{% endblock %}
