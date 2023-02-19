@@ -1,0 +1,340 @@
+:root{
+    --p1: 350px 46px;
+    --p2: 472.7px 95px;
+    --p3: 470px 201px;
+    --p4: 367px 175px;
+    --p5: 563.3px 157px;
+    --p6: 608px 336px;
+    --p7: 356px 262px;
+    --p8: 705px 539px;
+    --p9: 586px 504px;
+    --p10: 326px 574px;
+    --p11: 260px 419px;
+    --p12: 399px 744px;
+    --p13: 359px 722px;
+    --p14: 288px 603px;
+    --p15: 746px 648px;
+    --p16: 758px 732px;
+    --p17: 836px 918px;
+    --p18: 642px 869px;
+    --p19: 506px 800px;
+    --p20: 465px 823px;
+    --p21: 412px 810px;
+    --p23: 415px 820px;
+    --p24: 317px 840px;
+    --p25: 271px 837px;
+    --p26: 248px 851px;
+    --p27: 606px 853px;
+    --p28: 547px 945px;
+    --p29: 577px 933px;
+    --p30: 899px 1210px;
+    --p31: 942px 1216px;
+    --p32: 939px 1208px;
+    --p34: 1028px 1214px;
+    --p35: 1040px 1172px;
+
+    --q1: 440px 302px;
+    --q2: 591px 280px;
+    --q3: 388px 606px;
+    --q4: 504px 420px;
+    --q5: 751px 487px;
+    --q6: 716px 347px;
+    --q7: 770px 264px;
+    --q8: 730px 256px;
+    --q9: 837px 274px;
+    --q10: 830px 250px;
+    --q11: 800px 236px;
+    --q12: 764px 190px;
+    --q13: 764px 226px;
+    --q14: 713px 146px;
+    --q15: 568px 156px;
+    --q16: 678px 772px;
+    --q17: 510px 848px;
+    --q18: 423px 713px;
+    --q19: 387px 437px;
+    --q20: 527px 1011px;
+    --q21: 661px 918px;
+    --q22: 657px 995px;
+    --q23: 735px 825px;
+    --q24: 749px 704px;
+    --q25: 762px 591px;
+    --q26: 587px 1120px;
+    --q27: 583px 1115px;
+    --q28: 575px 1124px;
+    --q29: 544px 1121px;
+    --q30: 535px 1028px;
+    --q31: 602px 1096px;
+    --q32: 617px 1124px;
+    --q33: 664px 1128px;
+
+
+    --col1Bird1: #f0b71f;
+    --col2Bird1: #ffffff;
+    --col3Bird1: #bfb340;
+
+    --col1Bird2: #e51d5a;
+    --col2Bird2: #dd20f0;
+    --col3Bird2: #bceef0;
+}
+
+body{
+    background-color: rgb(63, 63, 63);
+}
+
+
+#birdsWidget{
+    position: relative;
+    width: 1080px;
+    height: 1500px;
+}
+
+.poly{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*Birds transformations*/
+#birdsWidget .poly:nth-child(11){
+    animation: 5s ease-in-out  infinite alternate poly11Anim;
+}
+
+#birdsWidget .poly:nth-child(6){
+    animation: 5s ease-in-out  infinite alternate poly6Anim;
+}
+
+#birdsWidget .poly:nth-child(2){
+    animation: 5s ease-in-out  infinite alternate poly2Anim;    
+}
+
+#birdsWidget .poly:nth-child(12){
+    animation: 5s ease-in-out  infinite alternate poly12Anim;    
+}
+
+#birdsWidget .poly:nth-child(7){
+    animation: 5s ease-in-out  infinite alternate poly7Anim;    
+}
+
+#birdsWidget .poly:nth-child(9){
+    animation: 5s ease-in-out  infinite alternate poly9Anim;    
+}
+
+#birdsWidget .poly:nth-child(5){
+    animation: 5s ease-in-out  infinite alternate poly5Anim;
+}
+
+#birdsWidget .poly:nth-child(8){
+    animation: 5s ease-in-out  infinite alternate poly8Anim;
+}
+
+#birdsWidget .poly:nth-child(14){
+    animation: 5s ease-in-out  infinite alternate poly14Anim;
+}
+
+/* +++++++++++++++++++++++++++++++++ */
+#birdsWidget .poly:nth-child(4){
+    clip-path: polygon(var(--p24), var(--p21), var(--p23), var(--p20));
+    background-color: var(--col1Bird1);
+}
+
+
+#birdsWidget .poly:nth-child(3){
+    clip-path: polygon(var(--p24), var(--p21), var(--p25), var(--p26));
+    background-color: var(--col2Bird1);
+}
+
+
+#birdsWidget .poly:nth-child(1){/*Broken vertecies?*/
+    clip-path: polygon(var(--p18), var(--p17), var(--p31), var(--p30));
+    background-color: var(--col1Bird1);
+}
+
+
+#birdsWidget .poly:nth-child(13){
+    clip-path: polygon(var(--p32), var(--p34), var(--p35), var(--p17));
+    background-color: var(--col2Bird1);
+}
+
+
+#birdsWidget .poly:nth-child(10){
+    clip-path: polygon(var(--p27), var(--p28), var(--p29), var(--p18));
+    background-color: var(--col3Bird1);
+}
+
+
+#birdsWidget .poly:nth-child(15){
+    clip-path: polygon(var(--p12), var(--p19), var(--p20), var(--p23));
+    background-color: var(--col3Bird1);
+}
+
+
+
+/* KeyFrames */
+@keyframes poly11Anim
+{
+    from
+    {
+        clip-path: polygon(var(--p1), var(--p2), var(--p3), var(--p4));
+        background-color: var(--col3Bird1);
+    }
+    to
+    {
+        clip-path: polygon(var(--q6), var(--q2), var(--q8), var(--q7));
+        background-color: var(--col3Bird2);
+    }
+}
+
+@keyframes poly6Anim
+{
+    from
+    {
+        clip-path: polygon(var(--p2), var(--p5), var(--p6), var(--p3));
+        background-color: var(--col2Bird1);
+    }
+    to
+    {
+        clip-path: polygon(var(--q29), var(--q28), var(--q27), var(--q30));
+        background-color: var(--col2Bird2);
+    }
+}
+
+@keyframes poly2Anim
+{
+    from
+    {
+        clip-path: polygon(var(--p4), var(--p3), var(--p6), var(--p7));
+        background-color: var(--col1Bird1);
+    }
+    to
+    {
+        clip-path: polygon(var(--q16), var(--q3), var(--q4), var(--q5));
+        background-color: var(--col3Bird2);
+    }
+}
+
+@keyframes poly12Anim
+{
+    from
+    {
+        clip-path: polygon(var(--p7), var(--p6), var(--p8), var(--p9));
+        background-color: var(--col2Bird1);
+    }
+    to
+    {
+        clip-path: polygon(var(--q1), var(--q8), var(--q13), var(--q15));
+        background-color: var(--col2Bird2);
+    }
+}
+
+@keyframes poly7Anim
+{
+    from
+    {
+        clip-path: polygon(var(--p7), var(--p9), var(--p10), var(--p11));
+        background-color: var(--col3Bird1);
+    }
+    to
+    {
+        clip-path: polygon(var(--q32), var(--q33), var(--q22), var(--q31));
+        background-color: var(--col1Bird2);
+    }
+}
+
+@keyframes poly9Anim
+{
+    from
+    {
+        clip-path: polygon(var(--p11), var(--p10), var(--p12), var(--p14));
+        background-color: var(--col1Bird1);
+    }
+    to
+    {
+        clip-path: polygon(var(--q16), var(--q24), var(--q25), var(--q25));
+        background-color: var(--col1Bird2);
+    }
+}
+
+@keyframes poly5Anim
+{
+    from
+    {
+        clip-path: polygon(var(--p10), var(--p9), var(--p18), var(--p12));
+        background-color: var(--col2Bird1);
+    }
+    to
+    {
+        clip-path: polygon(var(--q26), var(--q22), var(--q21), var(--q20));
+        background-color: var(--col3Bird2);
+    }
+}
+
+@keyframes poly8Anim
+{
+    from
+    {
+        clip-path: polygon(var(--p9), var(--p8), var(--p15), var(--p16));
+        background-color: var(--col1Bird1);
+    }
+    to
+    {
+        clip-path: polygon(var(--q16), var(--q22), var(--q23), var(--q24));
+        background-color: var(--col2Bird2);
+    }
+}
+
+@keyframes poly14Anim
+{
+    from
+    {
+        clip-path: polygon(var(--p9), var(--p16), var(--p17), var(--p18));
+        background-color: var(--col3Bird1);
+    }
+    to
+    {
+        clip-path: polygon(var(--q8), var(--q11), var(--q12), var(--q13));
+        background-color: var(--col3Bird2);
+    }
+}
+
+@keyframes poly11Anim
+{
+    from
+    {
+        clip-path: polygon(var(--p1), var(--p2), var(--p3), var(--p4));
+        background-color: var(--col3Bird1);
+    }
+    to
+    {
+        clip-path: polygon(var(--q6), var(--q2), var(--q8), var(--q7));
+        background-color: var(--col3Bird2);
+    }
+}
+
+@keyframes poly11Anim
+{
+    from
+    {
+        clip-path: polygon(var(--p1), var(--p2), var(--p3), var(--p4));
+        background-color: var(--col3Bird1);
+    }
+    to
+    {
+        clip-path: polygon(var(--q6), var(--q2), var(--q8), var(--q7));
+        background-color: var(--col3Bird2);
+    }
+}
+
+@keyframes poly11Anim
+{
+    from
+    {
+        clip-path: polygon(var(--p1), var(--p2), var(--p3), var(--p4));
+        background-color: var(--col3Bird1);
+    }
+    to
+    {
+        clip-path: polygon(var(--q6), var(--q2), var(--q8), var(--q7));
+        background-color: var(--col3Bird2);
+    }
+}

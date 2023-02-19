@@ -33,11 +33,8 @@ def make_shell_context():
 @app.cli.command()
 @click.option("--coverage/--no-coverage", default = False, help = "Enable code coverage")
 def test(coverage):
-    """Run the unit test.
+    """Run the unit test."""
+    import unittest
+    tests = unittest.TestLoader().discover('tests')
+    unittest.TextTestRunner(verbosity = 2).run(tests)
     
-    Keyword arguments:
-    argument -- description
-    Return: return_description
-    """
-    
-    pass

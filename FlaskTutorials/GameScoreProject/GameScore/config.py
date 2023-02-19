@@ -18,13 +18,26 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
+
     MAIL_SERVER = 587
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+    MAIL_USE_TLS = True
+    APP_MAIL_SUBJECT_PREFIX = '[GameScore]'
+    APP_MAIL_SENDER = 'GameScore Admin\n<{}>'.format(os.environ.get("MAIL_USERNAME"))
+
     SQLALCHEMY_DATABASE_URI = os.environ.get("DEV_DATABASE_URL")
 
 class TestingConfig(Config):
     TESTING = True
+
+    MAIL_SERVER = 587
+    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
+    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+    MAIL_USE_TLS = True
+    APP_MAIL_SUBJECT_PREFIX = '[GameScore]'
+    APP_MAIL_SENDER = 'GameScore Admin\n<{}>'.format(os.environ.get("MAIL_USERNAME"))
+
     SQLALCHEMY_DATABASE_URI = os.environ.get("TEST_DATABASE_URL")
 
 

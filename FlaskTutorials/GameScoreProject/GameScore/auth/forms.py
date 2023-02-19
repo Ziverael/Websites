@@ -1,6 +1,9 @@
+"""
+Since WTForms 2.2.1 Email validation is handled by external library
+"""
 from flask_wtf import Form
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, ValidationError
-from wtforms.validators import Required, Email, Length, Regexp, EqualTo
+from wtforms.validators import DataRequired, Email, Length, Regexp, EqualTo
 from ..models import User
 
 
@@ -8,14 +11,14 @@ class LoginForm(Form):
     email = StringField(
         'Email',
         validators = [
-            Required(),
+            DataRequired(),
             Length(1, 64),
             Email()
             ]
     )
     password = PasswordField(
         "Password",
-        validators = [Required()]
+        validators = [DataRequired()]
     )
     remember_me = BooleanField( "Keep me logged in")
     submit = SubmitField("Log In")
@@ -25,7 +28,7 @@ class RegistrationForm(Form):
     email = StringField(
         'Email',
         validators = [
-            Required(),
+            DataRequired(),
             Length(1, 64),
             Email()
         ]
@@ -33,7 +36,7 @@ class RegistrationForm(Form):
     username = StringField(
         'Username',
         validators = [
-            Required(),
+            DataRequired(),
             Length(1, 64),
             Regexp('^[A-Za-z][A-Za-z0-9_.]*$', 0, 'Username must have only letters, numbers, dots or underscore.')
         ]
@@ -41,14 +44,14 @@ class RegistrationForm(Form):
     password = PasswordField(
         'Password',
         validators = [
-            Required(),
-            EqualTo(password2, "Passwords must match.")
+            DataRequired(),
+            EqualTo("password2", "Passwords must match.")
         ]
     )
     password2 = PasswordField(
         'Confirm password',
         validators = [
-            Required()
+            DataRequired()
         ]
     )
     submit = SubmitField('Register')
