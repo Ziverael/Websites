@@ -1,8 +1,8 @@
 """
 To run Flasky project:
 
-$export FLASK_APP=flasky.py
-$flask run
+export FLASK_APP=flasky.py
+flask run
 
 
 To upgrade Flasky database to last version, just run
@@ -35,6 +35,6 @@ def make_shell_context():
 def test(coverage):
     """Run the unit test."""
     import unittest
-    tests = unittest.TestLoader().discover('tests')
-    unittest.TextTestRunner(verbosity = 2).run(tests)
+    tests = unittest.TestLoader().discover('tests') # It find test and read file. If there is executable fragments that line would execute it
+    unittest.TextTestRunner(verbosity = 2).run(tests) # It run TestCases
     

@@ -1,0 +1,103 @@
+{
+    "CoreCitizen" : {
+        "CP" : 5,
+        "Ability" : {
+            "willpower" : 1,
+            "agility" : 1,
+            "intelligence" : 1
+        },
+        "SpecialAbilities" : {
+            "Kontrakty" : "Your character has a network of contacts all throughout core planets. When you make an influence test to gather information, you gain advantage, and you can gather information in half the duration while within a city with a population of at least 100,000.",
+            "Znajomość miasta" : "Your character gains advantage on the following skills while within an urban environment: acrobatics, athletics, perception, and stealth."
+        },
+        "Bonus Talent" : false,
+        "Wealth" : 500,
+        "Description" : "The character is from one of the core Confederate or Dominion planets. Being raised amongst high population urban centers, the character is wealthier and more educated than most others but has been raised deluded by the propaganda of their tyrannical galactic empire. Core Citizens have a wide variety of backgrounds and skill sets, and they can set out for military or academic professions.",
+        "Image" : "/path/to/image"
+    },
+
+    "Ghost" : {
+        "CP" : 6,
+        "Ability" : {
+            "willpower" : 1,
+            "agility" : 1,
+            "instinct" : 1
+        },
+        "SpecialAbilities" : {
+            "Trening komandosa" : "The character is a trained and certified graduate of the government’s ghost program. Their skills as a psychic have been augmented by strict physical and mental conditioning. The character has gone through layers of mental conditioning, mind wipes, and is controlled through neural implants. While essentially a slave to their government, the character is now a controlled psychic, rather than an uncontrolled psychic.",
+            "Wojskowy inwentarz" : " The character must choose whether they are a Sanctioned Ghost or a Rogue Ghost, picking one of the options listed below."
+        },
+        "Bonus Talent" : "Jaded",
+        "Wealth" : false,
+        "Variant" : {
+            "Wojskowy" : "The character can choose to be a sanctioned ghost operative of a government. The character has no starting wealth, but they begin with a Tier 1 Hostile Environment Suit and 8,000 credits worth of weapons, ammunition, and gear. Any credits they do not spend are wasted. These characters also begin play with a Vessel-Pattern Neural Implant, greatly restricting their ability as independent players (see Neural Implants in Game Universe Rules chapter).",
+            "Wyjęty spod prawa" : "The character is a rogue ghost that exists outside the control of government. The character has normal starting credits to determine their gear, but they do not have a Neural Implant"
+        },
+        "Description" : "Ghosts are the secret soldiers, spies, and assassins of the Confederacy, and later Dominion. They are recruited from the ranks of psionic children taken from their homes when they are young and then conditioned to be the ultimate killing machines for their governments. These shadowy figures use stealth technology and psionic powers to infiltrate any obstacle and exterminate their targets with cold precision."
+    },
+    "Kel-Morian" : {
+        "CP" : 4,
+        "Ability" : {
+            "fortitude" : 2,
+            "strength" : 1
+        },
+        "SpecialAbilities" : {
+            "Więź z gildią" : "Your loyalty to one of the Kel-Morian factions has its perks and downsides. You should work with your Game Master to decide what Kel-Morian faction you belong to, such the Kelanis Shipping Guild, the Meinhoff Miner’s Union, or the Paladino Pirate Blockade. You gain advantage on dice checks when interacting with fellow members of your guild.",
+            "Penjsa z gildii" : "As long as you are a member in good standing in your Kel-Morian faction, every time you level up, you receive an amount of credits equal to 25x your new level"
+        },
+        "Bonus Talent" : false,
+        "Wealth" : 250,
+        "Variant" : false,
+        "Description" : "The Kel-Morian Combine is based off the planet of Moria. Ruled by the mining guilds, the people of the Combine are used to hard, back-breaking work. The Guilds are known for their greed and avarice, taking and stealing mining rights from other Terrans or even sabotaging occupied sites owned by different parties. In addition to physical laborers and corrupt corporations, the Kel-Morian Combine is known for brilliant engineers always ready to come up with the next major advance in technology, and the monetary profits that it will bring."
+    },
+
+    "FringeColonist" : {
+        "CP" : 7,
+        "Ability" : {
+            "fortitude" : 1,
+            "agility" : 1,
+            "strength" : 1
+        },
+        "SpecialAbilities" : {
+            "Sztuka przetrwania" : "Through extensive time spent in dangerous environments, you have gained a resistance to poisons and diseases. You gain advantage on Endurance tests to resist succumbing to a poison or disease",
+            "Wielka stanowczość" : "Time on the frontier has made you difficult to shake. Enemies who try to use combat influence on you have disadvantage. However, you have disadvantage on all combat influence tests you perform, except those to taunt."
+        },
+        "Bonus Talent" : false,
+        "Wealth" : false,
+        "Variant" : false,
+        "Description" : "Fringe Colonists vary as greatly as the worlds they come from. Fringe Colonists could be from agricultural settlements such as Shiloh, backwater colonies such as Mar Sara, military and research stations on planets like Char, or lawless outlying planets such as Dead Man’s Rock. Wherever they come from, these worlds produce a diverse yet tough breed, well situated for the rigors of adventuring in the Koprulu Sector."
+    },
+
+    "Umojan" : {
+        "CP" : 4,
+        "Ability" : {
+            "willpower" : 1,
+            "intelligence" : 1,
+            "instinct" : 1
+        },
+        "SpecialAbilities" : {
+            "Wiedza o obcych" : "The character has a great deal of knowledge on alien races. You gain advantage on science, lore, computers, and medicine skill checks regarding aliens, such as Protoss, Zerg, or other non-Terran races.",
+            "Sabotaż" : "You gain advantage on Influence checks against Terrans that do not share this background."
+        },
+        "Bonus Talent" : false,
+        "Wealth" : 250,
+        "Variant" : false,
+        "Description" : "The Umojan Protectorate is a neutral faction based out of the world of Umoja. While the smallest Terran empire, they boast an impressive number of scientists, diplomats, and spies. Many in the Protectorate look favorably on the Protoss, and seek an alliance with their species. Umoja is led by a ruling council rather than a fascist government, and is seen as a government that respects freedom and dislikes greed and ambition."
+    },
+
+    "UED" : {
+        "CP" : 6,
+        "Ability" : {
+            "strength" : 2,
+            "instinct" : 2
+        },
+        "SpecialAbilities" : {
+            "Ziemianin" : "Being one of the few in the Koprulu Sector actually native to the Terran home world, you progress at a different rate than most native Terrans. For you, purchasing a new talent only costs 1 characteristic point. However, gaining a new batch of skills costs 2 characteristic points, 1 more than normal.",
+            "Łańcuch komend" : "ou gain advantage on influence and leadership tests against targets or allies that are a lower level than you. However, you suffer disadvantage leadership and influence tests on those that are higher level than you."
+        },
+        "Bonus Talent" : false,
+        "Wealth" : false,
+        "Variant" : false,
+        "Description" : "The UED Expedition force came from Earth during the Brood War to conquer the Koprulu Sector and put an end to hostilities in the sector for the glory of humanity. Only the best and brightest were selected to be a part of the expedition, leading to all UED members in the sector being highly trained and capable. Even after their defeat at the end of the Brood War, occasionally survivors can still be found hiding in Terran society, often serving as rogue scientists and mercenaries."
+    }
+}

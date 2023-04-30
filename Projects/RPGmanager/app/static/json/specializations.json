@@ -1,0 +1,144 @@
+{
+    "Academic" : {
+        "Ability" : {
+            "intelligence" : 1
+        },
+        "Talent" : "Smart Shot",
+        "Focus Skill" : "Science|Lore",
+        "SpecialAbilities" : {
+            "Inteligentne rozwiązanie" : "The character can use science to solve common problems in unique ways. By making a DC 20 Science check, the character can allow a skill or combat action to be performed in a unique manner. For example, a science check can be used to allow the character to ricochet a bullet off a wall and hit a target behind cover, applying a -5 penalty. What applications are proper use of this ability is GM’s discretion. A player should not spend too much game time thinking of creative uses of this power."
+        }
+    },
+
+    "Brute" : {
+        "Ability" : {
+            "strength" : 1
+        },
+        "Talent" : "Power Strike",
+        "Focus Skill" : "Atletics|Durability",
+        "SpecialAbilities" : {
+            "Potężny zamach" : "When the character makes a heavy strike action, they gain the Cleaving (1) weapon trait in addition to all other bonuses for performing a heavy strike."
+        }
+    },
+
+    "Demolitionist" : {
+        "Ability" : {
+            "instinct" : 1
+        },
+        "Talent" : "Grenade Catcher",
+        "Focus Skill" : "Acrobatics|Ranged",
+        "SpecialAbilities" : {
+            "Wielki wybuch" : "You are specialized in controlling weapons with the grenade, rocket, or missile traits as well as weapons from the explosives category. When you attack with such weapons, you may choose to increase their burst area by 1."
+        }
+    },
+
+    "Guardian" : {
+        "Ability" : {
+            "fortitude" : 1
+        },
+        "Talent" : false,
+        "Focus Skill" : "Defensive Training|Endurance",
+        "SpecialAbilities" : {
+            "Żywa tarcza" : "The guardian can shift as a reaction when it is not their turn to absorb a blow that was meant towards an adjacent ally. This can be any non-area melee or ranged attack. The guardian and the ally swap squares."
+        }
+    },
+
+    "Infiltrator" : {
+        "Ability" : {
+            "agility" : 1
+        },
+        "Talent" : "Sneak Attack",
+        "Focus Skill" : "Stealth|Acrobatics",
+        "SpecialAbilities" : {
+            "W głębokim ukryciu" : "The character can make stealth checks to hide in combat, even while inside an enemy’s line of sight."
+        }
+    },
+
+    "Leader" : {
+        "Ability" : {
+            "willpower" : 1
+        },
+        "Talent" : "Inspirational Presence",
+        "Focus Skill" : "Leadership|Mental Training",
+        "SpecialAbilities" : {
+            "Skuteczne wytchnienie" : "Whenever the character uses the Rally function of the Leadership skill, each ally that gains a morale point also gains 5 temporary hit points."
+        }
+    },
+
+    "Medic" : {
+        "Ability" : {
+            "intelligence" : 1
+        },
+        "Talent" : "Field Medic",
+        "Focus Skill" : "Medicine|Science",
+        "SpecialAbilities" : {
+            "Chirurgiczne wsparcie" : "When rolling a natural 12 or higher on a first aid check, the target character also heals 1 crippling wound."
+        }
+    },
+
+    "Personality" : {
+        "Ability" : {
+            "willpower" : 1
+        },
+        "Talent" : "Dissuade",
+        "Focus Skill" : "Influence|Leadership",
+        "SpecialAbilities" : {
+            "Wpływowy" : "When making a combat influence test, can affect additional targets with the same type of influence equal to 1/3 their Willpower score."
+        }
+    },
+
+    "Pilot" : {
+        "Ability" : {
+            "instinct" : 1
+        },
+        "Talent" : false,
+        "Focus Skill" : "Pilot|Ranged",
+        "SpecialAbilities" : {
+            "Specjalizacja w pojazdach" : "The character gives whatever vehicle they are piloting +3 defense. This only affects vehicles they are piloting."
+        }
+    },
+
+    "Skirmisher" : {
+        "Ability" : {
+            "agility" : 1
+        },
+        "Talent" : "Dodge",
+        "Focus Skill" : "Athletics|Acrobatics",
+        "SpecialAbilities" : {
+            "Ruchoma osłona" : "If a skirmisher has cover against a foe at any point during their turn and ends their turn without cover, they retain a +2 cover bonus to defense against ranged attacks. In addition, the skirmisher gains +1 movement speed."
+        }
+    },
+
+    "Sniper" : {
+        "Ability" : {
+            "instinct" : 1
+        },
+        "Talent" : "Precision Shot",
+        "Focus Skill" : "Ranged|Stealth",
+        "SpecialAbilities" : {
+            "Terror z daleka" : "When damaging an opponent at further than medium range with a scoped rifle, the target of the attack and all their allies within 6 squares take a negative morale point. In addition, the character gains Rending (4) with all sniper rifles, gauss sniper rifles, long rifles, and canister rifles."
+        }
+    },
+
+    "Soldier" : {
+        "Ability" : {
+            "instinct" : 1
+        },
+        "Talent" : false,
+        "Focus Skill" : "Ranged|Melee",
+        "SpecialAbilities" : {
+            "Specjalistyczny trening" : "The character is considered to have +1 power rating of damage with all melee or ranged weapons, chosen when this specialization is taken."
+        }
+    },
+
+    "Survivalist" : {
+        "Ability" : {
+            "fortitude" : 1
+        },
+        "Talent" : "Hardened Survivalist",
+        "Focus Skill" : "Survival|Defensive Training",
+        "SpecialAbilities" : {
+            "Nieustępliwość" : "Whenever the character would be dealt an ongoing crippling wound effect, he can roll a d20. If the result is 12 or higher, the attack is a normal hit, not a crippling wound. If the attack is dealing multiple crippling points, the character must roll for each separate crippling point."
+        }
+    }
+}

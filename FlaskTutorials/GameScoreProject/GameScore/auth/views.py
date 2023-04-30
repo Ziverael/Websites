@@ -61,12 +61,11 @@ def register():
             username = form.email.data,
             password = password.form.password.data
         )
-        token.user.genrate_confirmation_token()
+        token = user.genrate_confirmation_token()
         send_email(
             user.email,
             'GameScore: Confirm your account',
             'auth/email/confirm',
-            user = user,
             token = token
             )
         flash("A confirmation email has been sent to you by email.")

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+html{
+    font-size: 12px;
+    color: white;
+    font-family: 'Oswald', 'Courier New', Courier, monospace;
+    letter-spacing: .2em;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    background-color: rgb(37, 27, 27);
+}
+li::marker{
+    content:'\268F';
+    font-size: 1.2em;
+    text-shadow: 3px 3px 3px white;
+
+}
+
+/* HEADER */
+header{
+    display: flex;
+    width: 100%;
+    background: linear-gradient(30deg, rgb(113, 113, 173), rgb(7, 7, 73), rgb(76, 0, 99));
+    flex-direction: row;
+}
+
+header > div{
+    display: flex;
+    flex-direction: column;
+}
+
+/* FOOTER */
+footer{
+    display: flex;
+    flex-direction: row;
+}

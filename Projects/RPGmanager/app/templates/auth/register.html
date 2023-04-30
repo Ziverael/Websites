@@ -1,0 +1,24 @@
+{% extend base.html %}
+
+{% block main %}
+<h1>Rejesracja</h1>
+<form action="" method = "get">
+    <label for="email">Email</label>    
+    <input type="email" name="email" id="email" placeholder = "Email" required>
+
+    <label for="name">Nazwa użytkownika</label>
+    <input type="text" name="username" id="name" placeholder="Nazwa użytkownika" required pattern = "[A-Za-z][A-Za-z0-9_.]+" minlength ="8" maxlength="32">
+
+    <label for="password">Hasło</label>
+    <input type="password" name="password" id="password" minlength="8" maxlength="64" required>
+
+    <label for="password2">Powtórz hasło</label>
+    <input type="password" name="password2" id="password2">
+
+    <label for="man">Mężczyzna</label>    
+    <input type="radio" name="man" id="sex" value="male">
+    <label for="woman">Kobieta</label>    
+    <input type="radio" name="wowan" id="sex" value="female">
+    <button>Zarejestruj</button>
+</form>
+{% endblock %}

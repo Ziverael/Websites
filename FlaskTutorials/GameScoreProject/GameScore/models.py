@@ -68,7 +68,7 @@ class User(UserMixin, db.Model):
     __tablename__ = 'users'
     
     id = db.Column(db.Integer, primary_key = True)
-    name = db.Column(db.String(64), unique = True, index = True)
+    username = db.Column(db.String(64), unique = True, index = True)
     email = db.Column(db.String(64), unique = True, index = True)
 
     confirmed = db.Column(db.Boolean, default = False)
@@ -120,8 +120,8 @@ class User(UserMixin, db.Model):
     def verify_password(self, password):
         return check_password_hash(self.password_hash, password)
 
-
-    posts = db.relationship('Review', backref = 'author')
+    #Temporarily disabled
+    # posts = db.relationship('Review', backref = 'author')
 
     def __str__(self) -> str:
         return "<{}>".format(self.username)
@@ -139,8 +139,8 @@ class Review(db.Model):
     title = db.Column(db.String(64))
     body = db.Column(db.Text)
 
-    users = db.relationship('User', db.ForeignKey('users.name'))
-    games = db.relationship('Game', db.ForeignKey('games.title'))
+    # users = db.relationship('User', db.ForeignKey('users.name'))
+    # games = db.relationship('Game', db.ForeignKey('games.title'))
 
 class Game(db.Model):
     __tablename__ = 'games'
@@ -156,7 +156,7 @@ class Game(db.Model):
     rating_gryonline = db.Column(db.Float)
     rating_readers = db.Column(db.Float, default = "0")
 
-    posts = db.relationship('Review', backref = "game")
+    # posts = db.relationship('Review', backref = "game")
 
 
 from . import login_manager

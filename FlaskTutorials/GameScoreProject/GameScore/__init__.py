@@ -20,7 +20,8 @@ def create_app(config_name = "default"):
     app = Flask(__name__)
     app.config.from_object(config[config_name])
     config[config_name].init_app(app)
-
+    
+    # print(app.config["SQLALCHEMY_DATABASE_URI"])
     try:
         os.makedirs(app.instance_path)
     except OSError:

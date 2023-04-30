@@ -1,0 +1,68 @@
+{
+    "Terran" : {
+            "CP" : 4,
+        "Ability" : {
+            "strength" : 2,
+            "instinct" : 2,
+            "agility" : 2,
+            "fortitude" : 2,
+            "intelligence" : 2,
+            "willpower" : 2
+        },
+        "Overall Description" : {
+            "Background" : "All Terrans are heavily influenced by the background or origin that they come from. Therefore, at character creation, a Terran character must choose and spend some of their starting characteristic points on a Terran character background.",
+            "Adaptability" : " Terrans are an adaptable and intuitive race. Against all odds, they have survived and persevered in a galaxy that has set out to destroy them. As such, Terrans gain +1 skill point whenever they spend characteristic points to purchase skills. Furthermore, all Terrans choose one skill at character creation to be their focus skill. Their maximum number of ranks in that skill based on level is increased by 2. They cannot change their focus skill; however, their choice of specialization may give them an additional focus skill. If characters have a focus from multiple sources, simply increase the maximum ranks they are capable of gaining in a skill from Focus by 1. For example, if a character has a focus in ranged combat and gains the ranged combat focus from a specialization, they then gain +3 maximum ranks in that focus.",
+            "Specialization" : "At character creation, a Terran character chooses a specialization. Their chosen specialization gives them a unique special ability, bonuses to their ability scores, and an additional skill focus. Characters gain a bonus specialization at levels 4, 8, 12, and 16. They gain the bonus ability score, special ability, and focus of each of the new specializations. In addition, characters gain an advanced specialization at levels 10, 14, 18, 22, 26 and 30 and a master specialization at levels 20, 24, and 28. Advanced and master specializations are bonus specializations available exclusively to higher level Terran characters that give bonus special traits, skill focuses, and (in the case of master specializations) ability scores. Therefore, by level 30 a Terran character will have 14 specializations (5 specializations, 6 advanced, 3 master).",
+            "Description" : "Terran is the common name for the humans of Earth. Most Terrans in the Koprulu Sector have never been to Earth, but they are the descendants of outlaws of their home planet that were shipped into space and crash landed in the Koprulu sector. Over the last few centuries, the Terrans have built a massive civilization far from their distant home planet. Compared to other alien species, Terrans are adaptable, clever, and have a remarkable perseverance and will to survive against all odds. They have claimed their place in the galaxy and will not yield it to anything, or anyone. A Terran character’s greatest Strength is their mastery of skills. They gain skills faster than any other species, and their focus allows them to perfect a skill beyond the capacities of rival races. In addition, Terrans have access to a colossal variety of customizable weaponry and equipment, including augmenting drugs and chemicals. Their specializations give them a steady trickle of new special abilities as they advance."
+        }
+    },
+
+    "Terran Psionic" : {
+        "CP" : 4,
+    "Ability" : {
+        "strength" : 2,
+        "instinct" : 2,
+        "agility" : 2,
+        "fortitude" : 2,
+        "intelligence" : 2,
+        "willpower" : 2
+    },
+    "Overall Description" : {
+        "Background" : "All Terrans are heavily influenced by the background or origin that they come from. Therefore, at character creation, a Terran character must choose and spend some of their starting characteristic points on a Terran character background.",
+        "Adaptability" : " Terrans are an adaptable and intuitive race. Against all odds, they have survived and persevered in a galaxy that has set out to destroy them. As such, Terrans gain +1 skill point whenever they spend characteristic points to purchase skills. Furthermore, all Terrans choose one skill at character creation to be their focus skill. Their maximum number of ranks in that skill based on level is increased by 2. They cannot change their focus skill; however, their choice of specialization may give them an additional focus skill. If characters have a focus from multiple sources, simply increase the maximum ranks they are capable of gaining in a skill from Focus by 1. For example, if a character has a focus in ranged combat and gains the ranged combat focus from a specialization, they then gain +3 maximum ranks in that focus.",
+        "Innate Psionic Potential" : "Psionic Terrans have an innate psionic ability that is not found amongst ordinary Terrans. This makes them unique, estranged, and often hunted individuals, but nonetheless very powerful. Psionic terrans are uncontrolled manifesters that have a starting Psi Level of 1 (unless stated otherwise). They have access to the psionics skill. They start with no psionic powers; although they can gain psionic powers through purchasing talents such as Psionic Power. The innate psychic abilities of a Terran psychic vary greatly. When creating such a character, the player must choose how much psionic potential their character has. This is done by spending characteristic points. The more CPs spent on the character’s psionic power, the greater potential they have. The following are the options for the psionic terran characters.",
+        "Specialization" : "At character creation, a Terran character chooses a specialization. Their chosen specialization gives them a unique special ability, bonuses to their ability scores, and an additional skill focus. Characters gain a bonus specialization at levels 4, 8, 12, and 16. They gain the bonus ability score, special ability, and focus of each of the new specializations. In addition, characters gain an advanced specialization at levels 10, 14, 18, 22, 26 and 30 and a master specialization at levels 20, 24, and 28. Advanced and master specializations are bonus specializations available exclusively to higher level Terran characters that give bonus special traits, skill focuses, and (in the case of master specializations) ability scores. Therefore, by level 30 a Terran character will have 14 specializations (5 specializations, 6 advanced, 3 master).",
+        "Description" : "Terran is the common name for the humans of Earth. Most Terrans in the Koprulu Sector have never been to Earth, but they are the descendants of outlaws of their home planet that were shipped into space and crash landed in the Koprulu sector. Over the last few centuries, the Terrans have built a massive civilization far from their distant home planet. Compared to other alien species, Terrans are adaptable, clever, and have a remarkable perseverance and will to survive against all odds. They have claimed their place in the galaxy and will not yield it to anything, or anyone. A Terran character’s greatest Strength is their mastery of skills. They gain skills faster than any other species, and their focus allows them to perfect a skill beyond the capacities of rival races. In addition, Terrans have access to a colossal variety of customizable weaponry and equipment, including augmenting drugs and chemicals. Their specializations give them a steady trickle of new special abilities as they advance."
+    },
+    "Variant" : {
+        "Psychic Wrangler" : {
+            "CP" : 2,
+            "Starting psi level" : 0,
+            "Maximum psi level" : 4,
+            "Available trait" : "Psionic Detection",
+            "Description" : "an individual with only minor psychic ability that can detect other psionic beings around them. A psychic wrangler does not gain access to any psionic disciplines or psionic powers. They can gain a maximum psi level of 4 and have the Psionic Detection special trait. Playing a psionic wrangler costs 2 characteristic points."
+        },
+        "Basic Telepath" : {
+            "CP" : 6,
+            "Starting psi level" : 0,
+            "Maximum psi level" : 4,
+            "Available trait" : "Psionic Detection",
+            "Description" : "an individual with the ability to read and manipulate minds on a basic level and somewhat affect their own anatomy. A basic telepath has access to the Telepathy, Augmentation, and Cloaking psionic disciplines. They can gain a maximum psi level of 4 and have the Psionic Detection special trait. Playing a basic telepath costs 6 characteristic points."
+        },
+        "Advanced Telepath" : {
+            "CP" : 9,
+            "Starting psi level" : 2,
+            "Maximum psi level" : 6,
+            "Available trait" : "Psionic Detection",
+            "Description" : "an individual with the natural ability to read and manipulate minds with ease and even wound others through sheer psychic will. An advanced telepath has access to the Telepathy, Augmentation, and Cloaking psionic disciplines. They have a starting psi level of 2, can gain a maximum psi level of 6, and have the Psionic Detection and Natural Mind Reading special traits. Because they have natural mind reading, the character automatically begins the game with the Reading and Messaging psionic powers. Playing an advanced telepath costs 9 characteristic points."
+        },
+        "Telekinetic" : {
+            "CP" : 12,
+            "Starting psi level" : 3,
+            "Maximum psi level" : 8,
+            "Available trait" : "Psionic Detection",
+            "Description" : "a rare and gifted individual that can not only manipulate minds but can also affect physical matter around them through sheer force of will. A telekinetic has access to the Telepathy, Augmentation, Cloaking, and Telekinesis psionic disciplines. They have a starting psi level of 3, can gain a maximum psi level of 8, and have the Psionic Detection and Natural Mind Reading special traits. Because they have natural mind reading, the character automatically begins the game with the Reading and Messaging psionic powers. Playing a telekinetic costs 12 characteristic points."
+        }
+    }
+}
+}

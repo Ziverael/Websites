@@ -1,0 +1,12 @@
+Cześć {{User.username}}!
+
+
+Miło mi witać Ciebie w gronie używtkowników RPGHelpera. Wierzę, że nasza przygoda będzie składałą się z wielu sesji ;)
+Przed rozpoczęciem swojej pierwszej przygody w raz z gronem swoich znajomych, potwierdź swoje konto klikając w poniższy link:
+
+{{ url_for('auth.confirm', token = token, _external = True) }}
+
+Entaro!
+RPGHelper
+
+Uwaga: link został wygenerowany automatycznie. Prosimy na niego nie odpowiadać. W razie potrzeby prosimy kontaktować się pod adres podany na stronie RPGHelpera.

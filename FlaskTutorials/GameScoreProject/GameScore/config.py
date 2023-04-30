@@ -26,7 +26,8 @@ class DevelopmentConfig(Config):
     APP_MAIL_SUBJECT_PREFIX = '[GameScore]'
     APP_MAIL_SENDER = 'GameScore Admin\n<{}>'.format(os.environ.get("MAIL_USERNAME"))
 
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DEV_DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DEV_DATABASE_URL")  or \
+        'sqlite:///' + os.path.join(basedir, 'dev_database.db')
 
 class TestingConfig(Config):
     TESTING = True
@@ -38,7 +39,9 @@ class TestingConfig(Config):
     APP_MAIL_SUBJECT_PREFIX = '[GameScore]'
     APP_MAIL_SENDER = 'GameScore Admin\n<{}>'.format(os.environ.get("MAIL_USERNAME"))
 
-    SQLALCHEMY_DATABASE_URI = os.environ.get("TEST_DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("TEST_DATABASE_URL") or \
+        'sqlite:///' + os.path.join(basedir, 'test_database.db')
+
 
 
 class ProductionConfig(Config):
