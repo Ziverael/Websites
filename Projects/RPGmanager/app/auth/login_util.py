@@ -46,7 +46,7 @@ def generate_confirmation_token(id_, expiration = 3600):
     payload = {
         'confirm' : id_,
         'exp' : datetime.now(tz = timezone.utc) + timedelta(hours = 1),
-        'iss' : 'RPGadmin'
+        'iss' : config["MYSQL_USER"]
     }
     key = current_app.config["SECRET_KEY"]
     return jwt.encode(header, payload, key).decode("utf-8")
