@@ -1,4 +1,4 @@
-Cześć {{User.username}}!
+Cześć {{ session.username }}!
 
 
 Miło mi witać Ciebie w gronie używtkowników RPGHelpera. Wierzę, że nasza przygoda będzie składałą się z wielu sesji ;)

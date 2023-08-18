@@ -1,0 +1,11 @@
+<p>Cześć {{ session.username }}!</p>
+
+
+<p>Siemka! Krzysiek z tej strony! Dostałeś tego maila, bo - najprawdopodobniej - powiedziałem Ci, żebyś się tu zarejestrował. Poniżej znajduje się link do potwierdzenia konta. Trochę ceregiele, ale wiem, że strona jest publiczna, ergo może być narażona na dowcipnisiów, a ma to być pomocne narzędzie do umawiania się na planszówki. To co? Potwierdzamy i widzimy się na najbliższych planszóweczkach ;)</p>
+
+<p>{{ url_for('auth.confirm', token = token, _external = True) }}</p>
+
+<p>Ciao!</p>
+<p>Krzysiek</p>
+
+<p><small>Uwaga: link został wygenerowany automatycznie. Nie odpisujcie na niego bo i tak go nie odczytamm bo to nawet na moją publiczą pocztę nie leci XD.</small></p>

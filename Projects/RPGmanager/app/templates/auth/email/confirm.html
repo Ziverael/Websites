@@ -1,5 +1,12 @@
-{% extend base.html %}
+<p>Cześć {{ session.username }}!</p>
 
-{% block main %}
-<h1>Aktywacja konta</h1>
-{% endblock %}
+
+<p>Miło mi witać Ciebie w gronie używtkowników RPGHelpera. Wierzę, że nasza przygoda będzie składałą się z wielu sesji ;)
+Przed rozpoczęciem swojej pierwszej przygody w raz z gronem swoich znajomych, potwierdź swoje konto klikając w poniższy link:</p>
+
+<p>{{ url_for('auth.confirm', token = token, _external = True) }}</p>
+
+<p>Entaro!</p>
+<p>RPGHelper</p>
+
+<p><small>Uwaga: link został wygenerowany automatycznie. Prosimy na niego nie odpowiadać. W razie potrzeby prosimy kontaktować się pod adres podany na stronie RPGHelpera.</small></p>

@@ -7,20 +7,12 @@
     <label for="email">Email</label>    
     {{ form.email }}
 
-    <label for="name">Nazwa użytkownika</label>
-    {{ form.username }}
-
     <label for="password">Hasło</label>
     {{ form.password }}
 
     <label for="password2">Powtórz hasło</label>
     {{ form.password2 }}
 
-    {% for field in form.sex %}
-    {{ field.label }}
-    {{ field }}
-    {% endfor %}
-    
 
     <button>Zarejestruj</button>
 

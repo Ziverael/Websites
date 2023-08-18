@@ -16,13 +16,7 @@ class LoginForm(FlaskForm):
             Email()
         ]
     )
-    username = StringField(
-        'Username',
-        validators = [
-            DataRequired(message = "Wymagane dane!"),
-            Length(5, 32)
-        ]
-    )
+    
     password = PasswordField(
         'Password',
         validators = [
@@ -44,14 +38,7 @@ class RegistrationForm(FlaskForm):
             Email(message = "Passed invalid email")
         ]
     )
-    username = StringField(
-        'Username',
-        validators = [
-            DataRequired(message = "Username required!"),
-            Length(5, 32, message = "Username length should be beteween 8-32 characters"),
-            Regexp('^[A-Za-z][A-Za-z0-9_.]*$', 0, 'Username must have only letters, numbers, dots or underscores.')
-        ]
-    )
+   
     password = PasswordField(
         'Password',
         validators = [
@@ -66,10 +53,7 @@ class RegistrationForm(FlaskForm):
             DataRequired(message = "Confirmation of the password required!")
         ]
     )
-    sex = RadioField(
-        'Sex',
-        choices = [("Female", "woman"), ("Male", "Man")]
-        )
+    
     submit = SubmitField("Register")
 
     def validate_email(self, field):

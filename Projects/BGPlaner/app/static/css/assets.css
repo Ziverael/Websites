@@ -1,0 +1,744 @@
+:root{
+    --light-blue: #1e8bb9;
+    --green: #1c7e1f;
+    --yellow: #f0b71f;
+    --red: #a41b1d;
+
+}
+
+
+/* 
+.button{
+    position:relative;
+    font-size: 1.5rem;
+    padding: 1em 2em;
+    background: initial;
+    overflow: hidden;
+}
+
+.button-wrapper{
+    position: relative;
+    overflow: hidden;
+    padding: .3rem;
+    margin: 10px;
+
+}
+
+.button-blob{
+    position: absolute;
+    top:0;
+    left:0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(1rem);
+    background-color: rgba(255, 255, 255 ,0.1);
+    animation: ripple .4s linear infinite;
+}
+
+@keyframes ripple
+{
+    from{
+        width: 0;
+        height: 0;
+    }
+    to{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+
+.button-border:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(
+        0 0,
+        0 50%,
+        85% 50%,
+        85% 0
+    );
+    border: 1px solid var(--light-blue);
+}
+.button-border.red:before{
+    border: 1px solid var(--red);
+}
+.button-border.green:before{
+    border: 1px solid var(--green);
+}
+.button-border.yellow:before{
+    border: 1px solid var(--yellow);
+}
+
+.button-border:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 98.5%;
+    height: 97%;
+    clip-path: polygon(
+        100% 100%,
+        100% 48%,
+        14% 48%,
+        14% 100%
+    );
+    border: 1px solid var(--light-blue);
+}
+.button-border.red:after{
+    border: 1px solid var(--red);
+}
+.button-border.green:after{
+    border: 1px solid var(--green);
+}
+.button-border.yellow:after{
+    border: 1px solid var(--yellow);
+}
+
+
+.button:before{
+    position: absolute;
+    content:'';
+    left: 0;
+    top: -60%;
+    width: 100%;
+    height: 220%;
+    background: linear-gradient(-60deg, var(--light-blue) -80%, rgba(0, 0, 0 ,0) 180%);
+    transform: rotate(60deg) scale(95%);
+}
+.button.red:before{
+    background: linear-gradient(-60deg, var(--red) -80%, rgba(0, 0, 0 ,0) 180%);
+}
+.button.green:before{
+    background: linear-gradient(-60deg, var(--green) -80%, rgba(0, 0, 0 ,0) 180%);
+}
+.button.yellow:before{
+    background: linear-gradient(-60deg, var(--yellow) -80%, rgba(0, 0, 0 ,0) 180%);
+}
+
+span.button-tris:before{
+    position: absolute;
+    display: block;
+    content:'';
+    top: 60%;
+    bottom: 0;
+    left:0;
+    width:10%;
+    border-left: solid 1px var(--light-blue);
+    border-bottom: solid 1px var(--light-blue);
+}
+span.button-tris.red:before{
+    border-left: solid 1px var(--red);
+    border-bottom: solid 1px var(--red);
+}
+span.button-tris.green:before{
+    border-left: solid 1px var(--green);
+    border-bottom: solid 1px var(--green);
+
+}
+span.button-tris.yellow:before{
+    border-left: solid 1px var(--yellow);
+    border-bottom: solid 1px var(--yellow);
+}
+
+
+span.button-tris:after{
+    position: absolute;
+    display: block;
+    content:'';
+    top: 0;
+    height: 40%;
+    right:0;
+    width:10%;
+    border-right: solid 1px var(--light-blue);
+    border-top: solid 1px var(--light-blue);
+}
+span.button-tris.red:after{
+    border-right: solid 1px var(--red);
+    border-top: solid 1px var(--red);
+}
+span.button-tris.green:after{
+    border-right: solid 1px var(--green);
+    border-top: solid 1px var(--green);
+
+}
+span.button-tris.yellow:after{
+    border-right: solid 1px var(--yellow);
+    border-top: solid 1px var(--yellow);
+}
+ */
+
+/* -------------- */
+/* -------------- */
+/* BUTTON-V2 */
+/* -------------- */
+/* -------------- */
+
+.button{
+    /* It outermost object. Do not use padding here. Put it in .button-fill */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 10px;
+    /* padding: 1em 2em; */
+    width: 150px;
+    aspect-ratio: 1.8;
+    text-align: center;
+    font-size: 1.5rem;
+    background: initial;
+}
+
+/* .button-grid{
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    transform: scale(30%);
+} */
+
+.button p{
+    z-index: 1;
+}
+
+.button:before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0 ,0.3);
+    transform: rotate(60deg) scale(100%, 160%);
+    
+}
+
+.button:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(60deg) scale(100%,160%);
+    border-bottom: 1px solid var(--light-blue);
+    border-top: 1px solid var(--light-blue);
+}
+
+.button.red:after{
+    border-bottom: 1px solid var(--red);
+    border-top: 1px solid var(--red);
+}
+.button.green:after{
+    border-bottom: 1px solid var(--green);
+    border-top: 1px solid var(--green);
+}
+.button.yellow:after{
+    border-bottom: 1px solid var(--yellow);
+    border-top: 1px solid var(--yellow);
+}
+
+.button-fill{
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    top:5%;
+    left:4%;
+    width: 92%;
+    height: 90%;
+    
+}
+
+.button-fill:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/app/static/images/hex_grid.png") ;
+    /* background-size: cover; */
+    filter: blur(1px);
+    background-size: 75%;
+    transform: rotate(60deg) scale(100%,160%);
+    clip-path: circle(0 at 0 50%);
+    animation: grid 1s linear alternate infinite;
+    transition: clip-path .4s ease;
+
+}
+
+.button:hover .button-fill::after{
+    clip-path: circle(100% at center);
+}
+
+@keyframes grid{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0.2;
+    }
+}
+
+.button-fill:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-60deg, var(--light-blue) -80%, rgba(0, 0, 0 ,0) 180%);
+    transform: rotate(60deg) scale(100%,160%);
+}
+.button.red .button-fill:before{
+    background: linear-gradient(-60deg, var(--red) -80%, rgba(0, 0, 0 ,0) 180%);
+}
+.button.green .button-fill:before{
+    background: linear-gradient(-60deg, var(--green) -80%, rgba(0, 0, 0 ,0) 180%);
+}
+.button.yellow .button-fill:before{
+    background: linear-gradient(-60deg, var(--yellow) -80%, rgba(0, 0, 0 ,0) 180%);
+}
+
+.button-tris1::before{
+    position: absolute;
+    content: '';
+    top:0;
+    left:0;
+    width: 85%;
+    height: 56%;
+    border-left: 1px solid var(--light-blue);
+    border-top: 1px solid var(--light-blue);
+
+}
+.button.red .button-tris1::before{
+    border-left: 1px solid var(--red);
+    border-top: 1px solid var(--red);
+}
+.button.green .button-tris1::before{
+    border-left: 1px solid var(--green);
+    border-top: 1px solid var(--green);
+}
+.button.yellow .button-tris1::before{
+    border-left: 1px solid var(--yellow);
+    border-top: 1px solid var(--yellow);
+}
+
+.button-tris1::after{
+    position: absolute;
+    content: '';
+    bottom:0;
+    right:0;
+    width: 86%;
+    height: 55%;
+    border-bottom: 1px solid var(--light-blue);
+    border-right: 1px solid var(--light-blue);
+}
+.button.red .button-tris1::after{
+    border-bottom: 1px solid var(--red);
+    border-right: 1px solid var(--red);
+}
+.button.green .button-tris1::after{
+    border-bottom: 1px solid var(--green);
+    border-right: 1px solid var(--green);
+}
+.button.yellow .button-tris1::after{
+    border-bottom: 1px solid var(--yellow);
+    border-right: 1px solid var(--yellow);
+}
+
+
+.button-tris2::before{
+    position: absolute;
+    content: '';
+    bottom:0;
+    left:0;
+    width: 10%;
+    height: 33%;
+    border-left: 1px solid var(--light-blue);
+    border-bottom: 1px solid var(--light-blue);
+}
+.button.red .button-tris2::before{
+    border-left: 1px solid var(--red);
+    border-bottom: 1px solid var(--red);
+}
+.button.green .button-tris2::before{
+    border-left: 1px solid var(--green);
+    border-bottom: 1px solid var(--green);
+}
+.button.yellow .button-tris2::before{
+    border-left: 1px solid var(--yellow);
+    border-bottom: 1px solid var(--yellow);
+}
+
+.button-tris2::after{
+    position: absolute;
+    content: '';
+    top:0;
+    right:0;
+    width: 10%;
+    height: 33%;
+    border-top: 1px solid var(--light-blue);
+    border-right: 1px solid var(--light-blue);
+}
+.button.red .button-tris2::after{
+    border-top: 1px solid var(--red);
+    border-right: 1px solid var(--red);
+}
+.button.green .button-tris2::after{
+    border-top: 1px solid var(--green);
+    border-right: 1px solid var(--green);
+}
+.button.yellow .button-tris2::after{
+    border-top: 1px solid var(--yellow);
+    border-right: 1px solid var(--yellow);
+}
+
+.button-blob{
+    position: absolute;
+    top:0;
+    left:0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(1rem);
+    background-color: rgba(255, 255, 255 ,0.1);
+    animation: ripple .4s linear infinite;
+}
+
+@keyframes ripple
+{
+    from{
+        width: 0;
+        height: 0;
+    }
+    to{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* -------------- */
+/* -------------- */
+/* BUTTON-SLIDER */
+/* -------------- */
+/* -------------- */
+
+.button-slider{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.button-slider:before{
+    position: absolute;
+    content: '';
+    top: 2px;
+    left: 2px;
+    width: 31px;
+    height: 31px;
+    background-color: rgba(0, 0, 0 ,0.3);
+}
+
+.button-slider:after{
+    position: absolute;
+    content: '';
+    top: 4px;
+    left: 4px;
+    width: 27px;
+    height: 27px;
+    background: linear-gradient(-60deg, var(--light-blue) -80%, rgba(0, 0, 0 ,0) 180%);
+    transition: all  .5s linear;
+}
+
+.button-slider:hover:after{
+    transform: scale(105%) rotate(405deg);
+    background: var(--light-blue);
+}
+
+.button-slider span:nth-of-type(1)::before{
+    position: absolute;
+    content: '';
+    top:0;
+    left:0;
+    width: 5px;
+    height: 10px;
+    border-left: 1px solid var(--light-blue);
+    border-top: 1px solid var(--light-blue);
+}
+
+.button-slider span.up{
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-left: 2px solid var(--light-blue) ;
+    border-top: 2px solid var(--light-blue) ;
+    transform:  rotate(45deg);
+}
+
+.button-slider span.down{
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid var(--light-blue) ;
+    border-right: 2px solid var(--light-blue) ;
+    transform:  rotate(45deg);
+}
+
+
+.button-slider:hover span.up{
+    border-left: 2px solid black ;
+    border-top: 2px solid black;
+    z-index:1;
+}
+
+.button-slider:hover span.down{
+    border-right: 2px solid black ;
+    border-bottom: 2px solid black;
+    z-index:1;
+}
+
+.button-slider span:nth-of-type(1)::after{
+    position: absolute;
+    content: '';
+    right:0;
+    bottom:0;
+    width: 5px;
+    height: 10px;
+    border-right: 1px solid var(--light-blue);
+    border-bottom: 1px solid var(--light-blue);
+}
+
+.button-slider span:nth-of-type(2)::before{
+    position: absolute;
+    content: '';
+    bottom:0;
+    left:0;
+    width: 5px;
+    height: 10px;
+    border-left: 1px solid var(--light-blue);
+    border-bottom: 1px solid var(--light-blue);
+}
+.button-slider span:nth-of-type(2)::after{
+    position: absolute;
+    content: '';
+    right:0;
+    top:0;
+    width: 5px;
+    height: 10px;
+    border-right: 1px solid var(--light-blue);
+    border-top: 1px solid var(--light-blue);
+}
+
+
+
+/* -------------- */
+/* -------------- */
+/* DASHBOARD */
+/* -------------- */
+/* -------------- */
+.dashboard{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    width: 600px;
+    height: 400px;
+    border: solid 1px var(--light-blue);
+    border-top : 0;
+    padding: 10px 0;
+    
+}
+
+.dashboard.red{
+    border: solid 1px red;
+    border-top: 0;
+}
+
+.dashboard-wrapper{
+    overflow: hidden;
+    margin:10px;
+}
+
+.dashboard:before{
+    content:'';
+    position:absolute;
+    top: 5%;
+    left: 2.5%;
+    width: 95%;
+    height: 90%;
+    pointer-events: none;
+    background: linear-gradient(-60deg, var(--light-blue) -80%, rgba(0, 0, 0 ,0) 180%);
+}
+
+.dashboard.red:before{
+    background: linear-gradient(-60deg, red -80%, rgba(0, 0, 0 ,0) 180%);
+}
+
+.dashboard h3{
+    font-size: 1.5rem;
+    display: block;
+    position: relative;
+    top: -26px; /*Change value to match upper border*/
+    margin: 0;
+    padding: 2px 10px;
+    background-color: rgba(0, 0, 0 ,0.3);
+    border-left: solid 1px var(--light-blue);
+    border-right: solid 1px var(--light-blue);
+    font-weight: bold;
+    letter-spacing: .2em;
+}
+
+.dashboard.red h3{
+    border-left: solid 1px red;
+    border-right: solid 1px red;
+}
+
+.dashboard h3:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -1000px;
+    width: 1000px;
+    height: 1px;
+    background-color: var(--light-blue);
+}
+.dashboard.red h3:before{
+    background-color: red;
+}
+
+.dashboard h3:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 1000px;
+    height: 1px;
+    background-color: var(--light-blue);
+}
+
+.dashboard.red h3:after{
+    background-color: red;
+}
+
+.dashboard>p{
+    font-size: 1rem;
+    padding: 0 50px;
+}
+
+.dashboard-grid{
+    display: grid;
+    padding: 5%;
+    width:95%;
+    height: 100%;
+}
+
+
+/* -------------- */
+/* -------------- */
+/* MAINNAVIGATION */
+/* -------------- */
+/* -------------- */
+/* .site-nav{ */
+    /* background-image: linear-gradient(white, black);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  /* <- here it is */
+    /* width: 100px; */
+    /* height: 100px; */
+/* } */
+
+.site-nav.wrap{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    height: 2rem;
+    font-size: 1.5rem;
+    /* background-color: #1c7e1f; */
+    
+}
+
+.site-nav.left{
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    width: 50%;
+    height: 96%;
+    overflow: hidden;
+    transform: skew(-60deg);
+    background-image: linear-gradient(-60deg, var(--light-blue) -80%, rgba(0, 0, 0 ,0) 180%);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+.site-nav .mid{
+    position: absolute;
+    top: 3%;
+    left: 56%;
+    width: 20%;
+    height: 96%;
+    overflow: hidden;
+    transform: skew(-60deg);
+    background-image: linear-gradient(-60deg, var(--light-blue) -80%, rgba(0, 0, 0 ,0) 180%);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.navigation-header-left{
+    position: relative;
+    width: auto;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 0.6;
+}
+
+.navigation-header-left:before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    transform: skew(-30deg) translate( -10px);
+    /* border-left: 1px solid var(--light-blue); */
+    /* border-bottom: 1px solid var(--light-blue); */
+}
+
+.navigation-header-middle{
+    width: auto;
+    flex-grow: 0.1;
+    background: linear-gradient(-60deg, var(--light-blue) -80%, rgba(0, 0, 0 ,0) 180%);
+    transform: skew(-30deg) translate( -10px);
+}
+
+.navigation-header-right{
+    width: auto;
+    flex-grow: 0.3;
+    background-color: rgb(202, 65, 65);
+}

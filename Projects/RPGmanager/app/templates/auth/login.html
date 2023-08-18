@@ -1,17 +1,36 @@
-{% extend base.html %}
+{% extends "base.html" %}
 
 {% block main %}
 <h1>Logowanie</h1>
-<form action="" method = "get">
+<form action="" method = "post">
+    {# Without hidden_tag validation fails #}
+    {# {{ form.hidden_tag() }} #}
+    {{ form.csrf_token }}
     <label for="email">Email</label>    
-    <input type="email" name="email" id="email" placeholder = "Email" required>
-
+    <!-- <input type="email" name="email" id="email" placeholder = "Email" required> -->
+    {{ form.email }}
     <label for="name">Nazwa użytkownika</label>
-    <input type="text" name="username" id="name" placeholder="Nazwa użytkownika" required pattern = "[A-Za-z][A-Za-z0-9_.]+" minlength ="8" maxlength="32">
-
+    <!-- <input type="text" name="username" id="name" placeholder="Nazwa użytkownika" required pattern = "[A-Za-z][A-Za-z0-9_.]+" minlength ="8" maxlength="32"> -->
+    {{ form.username }}
+    
     <label for="password">Hasło</label>
-    <input type="password" name="password" id="password" minlength="8" maxlength="64" required>
-
+    <!-- <input type="password" name="password" id="password" minlength="8" maxlength="64" required> -->
+    {{ form.password }}
+    <label for="remember_me">Zapamiętaj mnie</label>
+    <!-- <input type="checkbox" name="remember_me" id="remember_me"> -->
+    {{ form.remember_me }}
     <button>Zaloguj</button>
+    
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="box">
+        <ul class="flashes">
+            {% for mess in messages%}
+            <li>{{ mess }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    {% endwith %}
 </form>
 {% endblock %}

@@ -16,7 +16,7 @@ const enemyType = {
     "Type1" : {
         width : 100,
         height : 100,
-        speed : Math.random() * 4 - 2,
+        speed : () =>{return [Math.random() * 4 - 2, Math.random() * 4 - 2]},
         img : enemyImage1,
         sheetWidth : 1758,
         sheetHeight : 155,
@@ -28,7 +28,7 @@ class Enemy{
     constructor(x_, y_, type_){
         this.x = x_;
         this.y = y_;
-        this.speed = enemyType[type_].speed;
+        [this.speedX, this.speedY] = enemyType[type_].speed();
         this.image = enemyType[type_].img;
         this.spriteWidth = enemyType[type_].sheetWidth / enemyType[type_].frames;
         this.spriteHeight = enemyType[type_].sheetHeight,
@@ -40,8 +40,11 @@ class Enemy{
     }
 
     update(){
-        this.x += this.speed;
-        this.y += this.speed;
+        this.x += this.speedX;
+        this.y += this.speedY;
+        /*Wiggling*/
+        this.x += Math.random() * 2 - 1;
+        this.y += Math.random() * 2 - 1;
         if(gameFrame % 2 === 0) this.frame >= this.framesTotal ? this.frame = 0 : this.frame++;
     }
 
@@ -57,7 +60,7 @@ class Enemy{
 
 
 for(let i = 0; i < numberOfEnemies; i++){
-    enemiesArray.push(new Enemy(Math.random() * CANVAS_WIDTH - 200, Math.random() * CANVAS_HEIGHT - 200, "Type1"));
+    enemiesArray.push(new Enemy(Math.random() * (CANVAS_WIDTH - 200), Math.random() * (CANVAS_HEIGHT - 200), "Type1"));
 }
 
 
@@ -65,7 +68,7 @@ function animate(){
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
     enemiesArray.forEach(enemy => {
         enemy.update();
-        enemy.draw()
+        enemy.draw();
     })
     gameFrame++;
     requestAnimationFrame(animate);

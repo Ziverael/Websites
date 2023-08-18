@@ -8,8 +8,6 @@ from .config import config
 
 mail = Mail()
 login = LoginManager()
-login.session_protection = "strong"
-
 
 def create_app(config_name : str = "default", config_ini = None) -> Flask:
     app = Flask(__name__)
@@ -34,7 +32,10 @@ def create_app(config_name : str = "default", config_ini = None) -> Flask:
     from .main import main as bp_main
     app.register_blueprint(bp_main, url_prefix = "/")
 
-    from .RPGsession import rpgSession as bp_rpgsession
-    app.register_blueprint(bp_rpgsession, url_prefix = "/RPGsession")
+
+    #Login manager customization
+    login.session_protection = "strong"
+    login.login_view = "auth.login"
+    login.login_message = "Login to enter this page."
 
     return app
